@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="600" viewBox="0 0 960 600">
+  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#a42c53"/><stop offset="1" stop-color="#7f1f3f"/></linearGradient></defs>
+  <rect width="960" height="600" fill="url(#g)"/>
+  <circle cx="760" cy="300" r="230" fill="#fff" opacity="0.12"/>
+  <circle cx="760" cy="300" r="290" fill="none" stroke="#fff" stroke-opacity="0.2" stroke-width="3"/>
+  <g transform="translate(640 180) scale(2.4)"><path fill="#ffffff" d="M50 86 C20 64 8 48 8 32 C8 18 19 8 32 8 C40 8 46 12 50 19 C54 12 60 8 68 8 C81 8 92 18 92 32 C92 48 80 64 50 86Z"/></g>
+  <text x="70" y="290" font-family="Poppins, 'Segoe UI', Arial, sans-serif" font-size="30" font-weight="500" fill="#fff" opacity="0.85" letter-spacing="3">HEALTH GUIDE</text>
+  <text x="70" y="360" font-family="Poppins, 'Segoe UI', Arial, sans-serif" font-size="64" font-weight="700" fill="#fff">Endometriosis</text>
+</svg>

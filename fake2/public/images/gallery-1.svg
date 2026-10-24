@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 800 800">
+  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#a42c53"/><stop offset="1" stop-color="#7f1f3f"/></linearGradient></defs>
+  <rect width="800" height="800" fill="url(#g)"/>
+  <circle cx="150" cy="140" r="180" fill="#fff" opacity="0.08"/>
+  <circle cx="680" cy="620" r="220" fill="#fff" opacity="0.07"/>
+  <circle cx="400" cy="360" r="170" fill="#fff" opacity="0.16"/>
+  <g transform="translate(290 250) scale(2.2)">
+    <g fill="#ffffff">
+      <ellipse cx="50" cy="28" rx="14" ry="24" transform="rotate(0 50 50)" opacity="0.9"/><ellipse cx="50" cy="28" rx="14" ry="24" transform="rotate(72 50 50)" opacity="0.9"/><ellipse cx="50" cy="28" rx="14" ry="24" transform="rotate(144 50 50)" opacity="0.9"/><ellipse cx="50" cy="28" rx="14" ry="24" transform="rotate(216 50 50)" opacity="0.9"/><ellipse cx="50" cy="28" rx="14" ry="24" transform="rotate(288 50 50)" opacity="0.9"/>
+      <circle cx="50" cy="50" r="11" fill="#fff"/>
+    </g></g>
+  <text x="400" y="650" text-anchor="middle" font-family="Poppins, 'Segoe UI', Arial, sans-serif" font-size="44" font-weight="600" fill="#fff">Reception</text>
+</svg>

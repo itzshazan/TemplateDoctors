@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="860" viewBox="0 0 800 860">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fbe9ef"/><stop offset="1" stop-color="#e3f4f2"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="860" fill="url(#bg)"/>
+  <circle cx="400" cy="380" r="300" fill="#fff" opacity="0.7"/>
+  <g transform="translate(70 90) scale(1.4)"><path fill="rgba(89,182,174,0.35)" d="M20 84 C14 40 44 12 88 12 C88 56 60 86 20 84Z"/><path d="M22 82 L70 30" stroke="#fff" stroke-width="4" opacity="0.7"/></g>
+  <g transform="translate(610 110) scale(1.2)">
+    <g fill="rgba(164,44,83,0.25)">
+      <ellipse cx="50" cy="28" rx="14" ry="24" transform="rotate(0 50 50)" opacity="0.9"/><ellipse cx="50" cy="28" rx="14" ry="24" transform="rotate(72 50 50)" opacity="0.9"/><ellipse cx="50" cy="28" rx="14" ry="24" transform="rotate(144 50 50)" opacity="0.9"/><ellipse cx="50" cy="28" rx="14" ry="24" transform="rotate(216 50 50)" opacity="0.9"/><ellipse cx="50" cy="28" rx="14" ry="24" transform="rotate(288 50 50)" opacity="0.9"/>
+      <circle cx="50" cy="50" r="11" fill="#fff"/>
+    </g></g>
+
+  <!-- hair back -->
+  <path d="M250 330 C240 170 330 120 400 120 C480 120 565 170 552 330 C560 450 590 520 560 600 L240 600 C210 520 240 450 250 330Z" fill="#2b1a1f"/>
+  <!-- neck -->
+  <path d="M362 430 h76 v80 q-38 26 -76 0z" fill="#d9a184"/>
+  <!-- coat / body -->
+  <path d="M170 860 C170 640 250 540 400 540 C550 540 630 640 630 860Z" fill="#ffffff"/>
+  <path d="M300 556 L400 700 L500 556 C470 546 435 540 400 540 C365 540 330 546 300 556Z" fill="#a42c53"/>
+  <path d="M352 540 L400 610 L448 540 Z" fill="#d9a184"/>
+  <path d="M300 556 L360 860 M500 556 L440 860" stroke="#e8e1e4" stroke-width="6"/>
+  <!-- stethoscope -->
+  <path d="M318 570 C300 650 330 720 380 730 M482 570 C500 650 470 720 420 730" fill="none" stroke="#3b3b44" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="400" cy="740" r="24" fill="#3b3b44"/><circle cx="400" cy="740" r="12" fill="#9aa0a8"/>
+  <!-- pocket + badge -->
+  <rect x="510" y="690" width="70" height="10" rx="5" fill="#59b6ae"/>
+  <rect x="515" y="650" width="60" height="34" rx="6" fill="#59b6ae" opacity="0.25"/>
+  <!-- face -->
+  <ellipse cx="400" cy="330" rx="112" ry="132" fill="#e6b294"/>
+  <!-- hair front -->
+  <path d="M288 300 C290 200 350 165 410 168 C470 172 520 210 515 300 C470 260 420 235 360 240 C330 250 305 275 288 300Z" fill="#2b1a1f"/>
+  <!-- ears + earrings -->
+  <ellipse cx="290" cy="340" rx="14" ry="24" fill="#d9a184"/><ellipse cx="510" cy="340" rx="14" ry="24" fill="#d9a184"/>
+  <circle cx="290" cy="372" r="6" fill="#59b6ae"/><circle cx="510" cy="372" r="6" fill="#59b6ae"/>
+  <!-- eyes / brows -->
+  <path d="M338 300 q22 -12 44 0 M418 300 q22 -12 44 0" stroke="#2b1a1f" stroke-width="7" fill="none" stroke-linecap="round"/>
+  <ellipse cx="360" cy="330" rx="10" ry="12" fill="#2b1a1f"/><ellipse cx="440" cy="330" rx="10" ry="12" fill="#2b1a1f"/>
+  <circle cx="364" cy="326" r="3" fill="#fff"/><circle cx="444" cy="326" r="3" fill="#fff"/>
+  <!-- bindi, nose, cheeks, smile -->
+  <circle cx="400" cy="282" r="5" fill="#a42c53"/>
+  <path d="M400 340 q-10 30 4 36" stroke="#c48a6d" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <ellipse cx="335" cy="375" rx="20" ry="11" fill="#f08fa6" opacity="0.35"/><ellipse cx="465" cy="375" rx="20" ry="11" fill="#f08fa6" opacity="0.35"/>
+  <path d="M362 398 q38 30 76 0" stroke="#a8455c" stroke-width="7" fill="none" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <rect width="64" height="64" rx="6" fill="#fdfcf8"/>
+  <rect x="5" y="5" width="54" height="54" rx="4" fill="none" stroke="#6f5a4b" stroke-width="1.4"/>
+  <text x="32" y="45"
+        text-anchor="middle"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-weight="600"
+        font-size="38"
+        font-style="italic"
+        fill="#6f5a4b">A</text>
+</svg>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="620" viewBox="0 0 700 620">
+  <rect width="700" height="620" rx="32" fill="#fff1f4"/>
+  <circle cx="350" cy="300" r="210" fill="#fff"/>
+  <circle cx="350" cy="300" r="250" fill="none" stroke="#59b6ae" stroke-opacity="0.35" stroke-width="3" stroke-dasharray="8 12"/>
+  <g transform="translate(220 160) scale(2.6)"><path fill="#a42c53" d="M50 86 C20 64 8 48 8 32 C8 18 19 8 32 8 C40 8 46 12 50 19 C54 12 60 8 68 8 C81 8 92 18 92 32 C92 48 80 64 50 86Z"/></g>
+  <g transform="translate(305 235) scale(0.9)"><path fill="#fff" d="M38 10h24v28h28v24H62v28H38V62H10V38h28z"/></g>
+  <g font-family="Poppins, 'Segoe UI', Arial, sans-serif" font-weight="600" font-size="20">
+    <rect x="40" y="70" width="190" height="56" rx="28" fill="#fff" stroke="#59b6ae" stroke-width="2"/>
+    <text x="135" y="105" text-anchor="middle" fill="#33948c">Ethical care</text>
+    <rect x="470" y="110" width="190" height="56" rx="28" fill="#fff" stroke="#a42c53" stroke-width="2"/>
+    <text x="565" y="145" text-anchor="middle" fill="#a42c53">Personalised</text>
+    <rect x="60" y="470" width="210" height="56" rx="28" fill="#fff" stroke="#a42c53" stroke-width="2"/>
+    <text x="165" y="505" text-anchor="middle" fill="#a42c53">Evidence-based</text>
+    <rect x="440" y="490" width="210" height="56" rx="28" fill="#fff" stroke="#59b6ae" stroke-width="2"/>
+    <text x="545" y="525" text-anchor="middle" fill="#33948c">Compassionate</text>
+  </g>
+</svg>

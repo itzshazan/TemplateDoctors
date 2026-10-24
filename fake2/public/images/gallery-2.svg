@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 800 800">
+  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#59b6ae"/><stop offset="1" stop-color="#33948c"/></linearGradient></defs>
+  <rect width="800" height="800" fill="url(#g)"/>
+  <circle cx="200" cy="140" r="180" fill="#fff" opacity="0.08"/>
+  <circle cx="680" cy="590" r="220" fill="#fff" opacity="0.07"/>
+  <circle cx="400" cy="360" r="170" fill="#fff" opacity="0.16"/>
+  <g transform="translate(290 250) scale(2.2)">
+    <circle cx="30" cy="30" r="14" fill="#ffffff"/><circle cx="70" cy="30" r="14" fill="#ffffff" opacity="0.75"/>
+    <path d="M6 88 q0 -38 24 -38 t24 38z" fill="#ffffff"/><path d="M46 88 q0 -38 24 -38 t24 38z" fill="#ffffff" opacity="0.75"/></g>
+  <text x="400" y="650" text-anchor="middle" font-family="Poppins, 'Segoe UI', Arial, sans-serif" font-size="44" font-weight="600" fill="#fff">Consultation Room</text>
+</svg>
