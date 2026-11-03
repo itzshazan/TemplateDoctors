@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="80" viewBox="0 0 320 80">
+  <circle cx="38" cy="40" r="30" fill="#14535a"/>
+  <circle cx="38" cy="40" r="24" fill="none" stroke="#d9b77e" stroke-width="1.6"/>
+  <text x="38" y="49" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="24" font-weight="700" fill="#fff">AB</text>
+  <text x="80" y="40" font-family="Poppins, 'Segoe UI', Arial, sans-serif" font-size="24" fill="#14535a"><tspan font-weight="300">Dr. </tspan><tspan font-weight="700">Amit V Bangia</tspan></text>
+  <text x="81" y="61" font-family="Poppins, 'Segoe UI', Arial, sans-serif" font-size="11.5" letter-spacing="1.6" fill="#7a5a2a">HAIR &amp; SKIN SPECIALIST</text>
+</svg>
