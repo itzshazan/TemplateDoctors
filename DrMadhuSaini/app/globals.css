@@ -1,15 +1,15 @@
 :root {
-  --primary: #155e66;
-  --primary-dark: #0d4248;
-  --primary-soft: #eaf5f4;
-  --teal: #c8641c;
-  --teal-dark: #a24f12;
-  --ink: #17211f;
-  --text: #4d5759;
-  --line: #e1e9e8;
-  --bg-alt: #f5f9f8;
+  --primary: #be185d;
+  --primary-dark: #9d174d;
+  --primary-soft: #fdf2f8;
+  --teal: #e11d48;
+  --teal-dark: #be123c;
+  --ink: #2b1420;
+  --text: #5c4a53;
+  --line: #f6dce7;
+  --bg-alt: #fff6fa;
   --radius: 18px;
-  --shadow: 0 10px 30px rgba(21, 94, 102, 0.1);
+  --shadow: 0 10px 30px rgba(190, 24, 93, 0.1);
   --header-h: 76px;
 }
 
@@ -282,7 +282,7 @@ h2 {
 }
 
 .hero {
-  background: #0d4248;
+  background: #831843;
 }
 
 /* Desktop: the photo fills the right side; the headline sits on solid teal on the left. */
@@ -300,7 +300,7 @@ h2 {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, #082c30 0%, #0d4248 40%, rgba(13, 66, 72, 0.55) 52%, rgba(13, 66, 72, 0) 72%);
+  background: linear-gradient(90deg, #500724 0%, #831843 40%, rgba(131, 24, 67, 0.55) 52%, rgba(131, 24, 67, 0) 72%);
 }
 
 .hero .container {
@@ -517,7 +517,7 @@ h2 {
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: var(--teal-dark);
-  background: #fdf1e6;
+  background: #ffe4e6;
   padding: 4px 10px;
   border-radius: 999px;
 }
@@ -542,7 +542,7 @@ h2 {
   position: fixed;
   inset: 0;
   z-index: 100;
-  background: rgba(4, 22, 24, 0.6);
+  background: rgba(42, 6, 22, 0.6);
   display: grid;
   place-items: center;
   padding: 20px;
@@ -934,7 +934,7 @@ h2 {
   font-weight: 500;
   text-align: left;
   color: #fff;
-  background: linear-gradient(180deg, rgba(8, 44, 48, 0) 0%, rgba(8, 44, 48, 0.85) 100%);
+  background: linear-gradient(180deg, rgba(80, 7, 36, 0) 0%, rgba(80, 7, 36, 0.85) 100%);
 }
 
 .gallery-item img {
@@ -952,7 +952,7 @@ h2 {
   position: fixed;
   inset: 0;
   z-index: 110;
-  background: rgba(3, 14, 16, 0.92);
+  background: rgba(28, 4, 15, 0.92);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1165,7 +1165,7 @@ h2 {
 }
 
 .form-success {
-  background: #fdf1e6;
+  background: #ffe4e6;
   color: var(--teal-dark);
   padding: 12px 16px;
   border-radius: 10px;
@@ -1188,7 +1188,7 @@ h2 {
 
 /* ---------- Footer ---------- */
 .footer {
-  background: #0a2a2e;
+  background: #3d0a20;
   color: rgba(255, 255, 255, 0.72);
   padding: 70px 0 0;
   font-size: 0.92rem;
@@ -1414,7 +1414,7 @@ h2 {
   }
 
   .hero::after {
-    background: linear-gradient(180deg, rgba(8, 44, 48, 0.78) 0%, rgba(8, 44, 48, 0.9) 100%);
+    background: linear-gradient(180deg, rgba(80, 7, 36, 0.78) 0%, rgba(80, 7, 36, 0.9) 100%);
   }
 
   .footer-grid {

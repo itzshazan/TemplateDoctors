@@ -462,7 +462,7 @@ export const faqs: Faq[] = [
 export type GalleryImage = { src: string; alt: string };
 
 export const gallery: GalleryImage[] = [
-  { src: `${IMG}/ever-healthy-hospital.jpg`, alt: "Ever Healthy Hospital, Sector 16-17, Hisar" },
+  { src: `${IMG}/ever-healthy-hospital.jpg`, alt: "Ever Healthy Hospital, Sector 16-17, Hisar (architect's design)" },
   { src: `${IMG}/ever-healthy-team.jpg`, alt: "The Ever Healthy Hospital team" },
   { src: `${IMG}/dr-madhu-saini-opd.jpg`, alt: "Dr. Madhu Saini in her OPD" },
   { src: `${IMG}/dr-madhu-saini.jpg`, alt: "Dr. Madhu Saini, Sr. Consultant Physician & Diabetologist" },

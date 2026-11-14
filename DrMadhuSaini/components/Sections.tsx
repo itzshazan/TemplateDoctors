@@ -21,7 +21,7 @@ export function Hero() {
       <img className="hero-bg" src={site.heroImage} alt="" fetchPriority="high" />
       <div className="container">
         <div className="hero-content">
-          <span className="eyebrow" style={{ color: "#ffd2a8" }}>
+          <span className="eyebrow" style={{ color: "#fbcfe8" }}>
             {site.hospital} · Sector 16-17, {site.city}
           </span>
           <h1>
