@@ -1,0 +1,56 @@
+{
+ "categories": [
+  {
+   "name": "Laparoscopic Surgery",
+   "slug": "laparoscopic-surgery"
+  },
+  {
+   "name": "General Surgery",
+   "slug": "general-surgery"
+  }
+ ],
+ "posts": [
+  {
+   "slug": "hernia-does-not-heal-on-its-own",
+   "title": "Hernia: Why It Won't Go Away on Its Own",
+   "date": "2026-10-12T10:00:00",
+   "categories": [
+    {
+     "name": "Laparoscopic Surgery",
+     "slug": "laparoscopic-surgery"
+    }
+   ],
+   "image": "/images/svc-lap.jpg",
+   "thumb": "/images/svc-lap.jpg",
+   "card": "/images/svc-lap.jpg"
+  },
+  {
+   "slug": "gallbladder-stones-do-you-need-surgery",
+   "title": "Gallbladder Stones: Do You Need Surgery?",
+   "date": "2026-09-28T10:00:00",
+   "categories": [
+    {
+     "name": "Laparoscopic Surgery",
+     "slug": "laparoscopic-surgery"
+    }
+   ],
+   "image": "/images/svc-ultrasound.jpg",
+   "thumb": "/images/svc-ultrasound.jpg",
+   "card": "/images/svc-ultrasound.jpg"
+  },
+  {
+   "slug": "piles-simple-steps-that-help",
+   "title": "Piles: Simple Steps That Really Help",
+   "date": "2026-09-14T10:00:00",
+   "categories": [
+    {
+     "name": "General Surgery",
+     "slug": "general-surgery"
+    }
+   ],
+   "image": "/images/svc-consult-2.jpg",
+   "thumb": "/images/svc-consult-2.jpg",
+   "card": "/images/svc-consult-2.jpg"
+  }
+ ]
+}
