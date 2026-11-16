@@ -18,7 +18,7 @@ Your doctor sheet (MBBS, MS General Surgery; 9 years per Bajaj Finserv Health; S
 
 ## Content checklist (confirm before going live)
 
-- [ ] **Identity**: the Google listing is titled "Dr. Devender Singh Laparoscopic and Robotic surgeon @ AIIMS, New Delhi" but the clinic address is NIT Faridabad. Is this the same doctor, and does he/she work at AIIMS? (The name is common.)
+- [ ] **Identity**: the Google listing is titled "Dr. Devender Singh Laparoscopic and Robotic surgeon @ AIIMS, New Delhi" but the clinic address is NIT Faridabad. Is this the same doctor, and is there a current AIIMS role? (The name is common.)
 - [ ] Colleges, years and experience (Bajaj lists 9 years). Add them to `doctorProfile.experience` in `pages.ts`.
 - [ ] **OPD days** (Google shows Monday 4–8:30 PM only).
 - [ ] Is +91 98113 85907 on **WhatsApp**? The contact form uses it.
