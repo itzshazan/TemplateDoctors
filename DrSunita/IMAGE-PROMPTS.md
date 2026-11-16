@@ -10,17 +10,24 @@ All text lives in `data/content.ts`. All images live in `public/images/`.
 
 `/`, `/about`, `/services`, `/services/[8 services]`, `/gallery`, `/contact`
 
-## Images in use (all placeholders made for this site)
+## Images in use
 
-| File | Where | Replace with |
+| File | Where | Source |
 | --- | --- | --- |
-| `hero.svg` | Hero (morphing round frame) | Warm photo of the clinic or of Dr. Sunita with a patient (portrait, about 1000 × 1100) |
-| `doctor.svg` | About section (arched frame) | Portrait of Dr. Sunita (portrait 4:5) |
-| `clinic.svg` | "Why choose" band | Photo of the clinic front / signboard |
-| `gallery-1…6.svg` | Gallery | Real clinic photos (4:3 landscape): entrance, reception, consultation room, examination room, waiting area |
-| `logo.svg`, `app/icon.svg` | Logo and favicon | Can stay |
+| `clinic-entrance.jpg` | "Why choose" band, first gallery photo | **Real photo** of the clinic from its Google Maps listing, uploaded by a Google user (Oct 2025). Ask the clinic for its own photo, or get permission, before going live |
+| `hero.jpg` | Hero (expecting mother) | AI-generated (Figma AI) |
+| `about.jpg` | About section (stethoscope on baby bump, doctor's hands only) | AI-generated |
+| `g-*.jpg` (5) | Gallery | AI-generated, showing care in general, not this clinic |
+| `logo.svg`, `app/icon.svg` | Logo and favicon | Made for this site |
 
-Photos exist on the Google Maps listing but couldn't be downloaded from this environment. Ask the clinic for originals and permission. Don't use photos of patients.
+The other photos on the Google listing belong to different nearby clinics (e.g. another gynaecologist's signboard), so they weren't used. No AI image shows a doctor's face, so no one is passed off as Dr. Sunita.
+
+### Replace when possible
+
+1. A real portrait of Dr. Sunita for `about.jpg` (portrait 4:5).
+2. Real photos of the consultation room, reception and waiting area for the gallery.
+
+Keep the same file names, or update the paths in `data/content.ts`.
 
 ## Content checklist (confirm before going live)
 

@@ -49,7 +49,7 @@ export function Hero() {
           </div>
         </div>
         <div className="hero-media reveal">
-          <img src={site.heroImage} alt={`${site.name}, ${site.role}`} width={520} height={520} />
+          <img src={site.heroImage} alt="Eye examination at the slit lamp" width={520} height={520} />
         </div>
       </div>
       <div className="container hero-box-wrap">
@@ -76,7 +76,7 @@ export function AboutBlock({ full = false }: { full?: boolean }) {
     <section className="section about">
       <div className="container about-grid">
         <div className="about-media reveal">
-          <img src={site.aboutImage} alt={`${site.name} examining a patient`} width={560} height={480} />
+          <img src={site.aboutImage} alt="Eye power check with a trial frame" width={560} height={480} />
           <div className="exp-badge">
             <strong>{site.experienceYears}+</strong>
             <span>Years of Experience</span>
@@ -161,7 +161,7 @@ export function PriorityBand() {
     <section className="priority">
       <div className="container priority-grid">
         <div className="priority-media reveal">
-          <img src={site.priorityImage} alt={`${site.clinic}`} width={520} height={360} />
+          <img src={site.priorityImage} alt="Eye clinic waiting area" width={520} height={360} />
         </div>
         <div className="priority-copy reveal">
           <h2>Your Vision Is Our Priority</h2>

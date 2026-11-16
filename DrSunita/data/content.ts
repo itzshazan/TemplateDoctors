@@ -31,9 +31,11 @@ export const site = {
   // Not found online. Shown as "Please call or visit to confirm timings" while empty.
   hours: [] as string[],
   logo: `${IMG}/logo.svg`,
-  heroImage: `${IMG}/hero.svg`,
-  aboutImage: `${IMG}/doctor.svg`,
-  whyImage: `${IMG}/clinic.svg`,
+  // AI-generated stock-style photos (no doctor faces). Replace with real photos when available.
+  heroImage: `${IMG}/hero.jpg`,
+  aboutImage: `${IMG}/about.jpg`,
+  // Real photo from the Google Maps listing (contributed by a Google user, Oct 2025). Get permission before going live.
+  whyImage: `${IMG}/clinic-entrance.jpg`,
   social: {
     facebook: "",
     instagram: "",
@@ -286,14 +288,15 @@ export const tips = [
 
 export type GalleryItem = { src: string; alt: string };
 
-// Placeholder illustrations. Replace with real clinic photos (see IMAGE-PROMPTS.md).
+// clinic-entrance.jpg is a real photo of the clinic (Google Maps). The rest are AI-generated stock-style
+// photos (not this clinic). Replace them with real clinic photos when available.
 export const gallery: GalleryItem[] = [
-  { src: `${IMG}/gallery-1.svg`, alt: "Clinic entrance" },
-  { src: `${IMG}/gallery-2.svg`, alt: "Reception" },
-  { src: `${IMG}/gallery-3.svg`, alt: "Consultation room" },
-  { src: `${IMG}/gallery-4.svg`, alt: "Examination room" },
-  { src: `${IMG}/gallery-5.svg`, alt: "Pregnancy care" },
-  { src: `${IMG}/gallery-6.svg`, alt: "Waiting area" },
+  { src: `${IMG}/clinic-entrance.jpg`, alt: "Dr Sunita Clinic entrance" },
+  { src: `${IMG}/g-bp-check.jpg`, alt: "Antenatal check-up" },
+  { src: `${IMG}/g-ultrasound.jpg`, alt: "Pregnancy scans & guidance" },
+  { src: `${IMG}/g-consultation.jpg`, alt: "Private consultation" },
+  { src: `${IMG}/g-reception.jpg`, alt: "Reception" },
+  { src: `${IMG}/g-waiting.jpg`, alt: "Comfortable waiting area" },
 ];
 
 export type Testimonial = { name: string; quote: string };

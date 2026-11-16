@@ -27,10 +27,11 @@ export const site = {
   // Not found online. Shown as "Call or visit to confirm timings" while empty.
   hours: [] as string[],
   logo: `${IMG}/logo.svg`,
-  heroBg: `${IMG}/hero-bg.svg`,
-  heroImage: `${IMG}/doctor.svg`,
-  aboutImage: `${IMG}/doctor-consult.svg`,
-  priorityImage: `${IMG}/clinic.svg`,
+  heroBg: `${IMG}/hero-bg.jpg`,
+  // AI-generated stock-style photos (no doctor faces). Replace with real photos of Dr. Sinha and the clinic when available.
+  heroImage: `${IMG}/hero.jpg`,
+  aboutImage: `${IMG}/about.jpg`,
+  priorityImage: `${IMG}/waiting.jpg`,
   social: {
     facebook: "",
     instagram: "",
@@ -494,16 +495,16 @@ export const credentials = {
 
 export type GalleryItem = { src: string; alt: string };
 
-// Placeholder illustrations. Replace with real clinic photos (see IMAGE-PROMPTS.md).
+// AI-generated stock-style photos of eye care (not photos of this clinic). Replace with real clinic photos when available.
 export const gallery: GalleryItem[] = [
-  { src: `${IMG}/gallery-1.svg`, alt: "Clinic reception" },
-  { src: `${IMG}/gallery-2.svg`, alt: "Vision testing chart" },
-  { src: `${IMG}/gallery-3.svg`, alt: "Slit-lamp examination" },
-  { src: `${IMG}/gallery-4.svg`, alt: "Consultation room" },
-  { src: `${IMG}/gallery-5.svg`, alt: "Spectacle and lens trial" },
-  { src: `${IMG}/gallery-6.svg`, alt: "Contact lens clinic" },
-  { src: `${IMG}/gallery-7.svg`, alt: "Eye pressure check" },
-  { src: `${IMG}/gallery-8.svg`, alt: "Clinic waiting area" },
+  { src: `${IMG}/g-slitlamp.jpg`, alt: "Slit-lamp eye examination" },
+  { src: `${IMG}/g-eyechart.jpg`, alt: "Vision testing" },
+  { src: `${IMG}/g-refractometer.jpg`, alt: "Computerised eye power check" },
+  { src: `${IMG}/g-desk.jpg`, alt: "Consultation" },
+  { src: `${IMG}/g-frames.jpg`, alt: "Spectacle frames" },
+  { src: `${IMG}/g-contactlens.jpg`, alt: "Contact lens care" },
+  { src: `${IMG}/g-reception.jpg`, alt: "Reception" },
+  { src: `${IMG}/g-family.jpg`, alt: "Eye care for the whole family" },
 ];
 
 export type Testimonial = { name: string; role: string; quote: string };
