@@ -1,0 +1,76 @@
+import Link from "next/link";
+import Icon from "./Icon";
+import { SITE, tel, treatmentPath, type SocialKey, type Treatment } from "@/config/site";
+
+const QUICK_LINKS = [
+  { label: "About", to: "/about" },
+  { label: "Gallery", to: "/gallery" },
+  { label: "Emergency", to: "/emergency" },
+  { label: "Contact", to: "/contact" },
+];
+
+function TreatmentLinks({ items }: { items: Treatment[] }) {
+  return (
+    <ul className="footer-links">
+      {items.slice(0, 6).map((t) => (
+        <li key={t.id}><Link href={treatmentPath(t)}>{t.title}</Link></li>
+      ))}
+    </ul>
+  );
+}
+
+export default function Footer() {
+  const socials = Object.entries(SITE.socials).filter(([, url]) => url) as [SocialKey, string][];
+
+  return (
+    <footer className="site-footer">
+      <div className="footer-main">
+        <div className="container">
+          <div>
+            <Link className="logo" href="/">
+              <img src="/img/logo-white.svg" alt={SITE.name} width={260} height={60} />
+            </Link>
+            <p>{SITE.tagline}</p>
+          </div>
+          <div>
+            <h4>Services</h4>
+            <TreatmentLinks items={SITE.services} />
+          </div>
+          <div>
+            <h4>Conditions</h4>
+            <TreatmentLinks items={SITE.conditions} />
+          </div>
+          <div>
+            <h4>Quick Links</h4>
+            <ul className="footer-links">
+              {QUICK_LINKS.map((l) => (
+                <li key={l.to}><Link href={l.to}>{l.label}</Link></li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <h4>Contact</h4>
+            <ul className="footer-contact">
+              <li><Icon name="phone" /><a href={tel(SITE.phone)}>{SITE.phone}</a></li>
+              {SITE.email && <li><Icon name="mail" /><a href={`mailto:${SITE.email}`}>{SITE.email}</a></li>}
+              <li><Icon name="pin" /><span>{SITE.address}</span></li>
+            </ul>
+            <div className="socials">
+              {socials.map(([key, url]) => (
+                <a key={key} href={url} aria-label={key} target="_blank" rel="noopener noreferrer">
+                  <Icon name={key} />
+                </a>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="footer-bottom">
+        <div className="container">
+          <span>© {new Date().getFullYear()} {SITE.name}. All rights reserved.</span>
+          <span>{SITE.hours}</span>
+        </div>
+      </div>
+    </footer>
+  );
+}
