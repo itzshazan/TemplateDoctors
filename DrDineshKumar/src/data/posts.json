@@ -1,0 +1,74 @@
+{
+ "categories": [
+  {
+   "name": "Diabetes",
+   "slug": "diabetes"
+  },
+  {
+   "name": "General Health",
+   "slug": "general-health"
+  },
+  {
+   "name": "Heart & BP",
+   "slug": "heart-bp"
+  }
+ ],
+ "posts": [
+  {
+   "slug": "loose-motion-diarrhoea-treatment-gurugram",
+   "title": "Loose Motion: When to Worry and How to Stay Hydrated",
+   "date": "2026-10-15T10:00:00",
+   "categories": [
+    {
+     "name": "General Health",
+     "slug": "general-health"
+    }
+   ],
+   "image": "/images/svc-digestive.jpg",
+   "thumb": "/images/svc-digestive.jpg",
+   "card": "/images/svc-digestive.jpg"
+  },
+  {
+   "slug": "diabetes-daily-habits-sugar-control",
+   "title": "Diabetes: 7 Daily Habits That Keep Sugar in Control",
+   "date": "2026-10-02T10:00:00",
+   "categories": [
+    {
+     "name": "Diabetes",
+     "slug": "diabetes"
+    }
+   ],
+   "image": "/images/diet.jpg",
+   "thumb": "/images/diet.jpg",
+   "card": "/images/diet.jpg"
+  },
+  {
+   "slug": "high-blood-pressure-silent-killer",
+   "title": "High Blood Pressure: Why It Is Called the Silent Killer",
+   "date": "2026-09-18T10:00:00",
+   "categories": [
+    {
+     "name": "Heart & BP",
+     "slug": "heart-bp"
+    }
+   ],
+   "image": "/images/svc-bp.jpg",
+   "thumb": "/images/svc-bp.jpg",
+   "card": "/images/svc-bp.jpg"
+  },
+  {
+   "slug": "thyroid-tests-symptoms-explained",
+   "title": "Thyroid Problems: Symptoms, Tests and Treatment Explained",
+   "date": "2026-09-05T10:00:00",
+   "categories": [
+    {
+     "name": "General Health",
+     "slug": "general-health"
+    }
+   ],
+   "image": "/images/svc-thyroid.jpg",
+   "thumb": "/images/svc-thyroid.jpg",
+   "card": "/images/svc-thyroid.jpg"
+  }
+ ]
+}
