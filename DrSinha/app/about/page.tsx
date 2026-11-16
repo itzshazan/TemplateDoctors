@@ -1,0 +1,21 @@
+import type { Metadata } from "next";
+import { AboutBlock, Credentials, CtaBand, PageBanner, StatsStrip, WhyChoose } from "@/components/Sections";
+import { site } from "@/data/content";
+
+export const metadata: Metadata = {
+  title: `About ${site.name}`,
+  description: `${site.name}: ${site.degrees}. ${site.experienceYears} years of experience as an eye specialist in Faridabad.`,
+};
+
+export default function AboutPage() {
+  return (
+    <>
+      <PageBanner title={`About ${site.name}`} crumbs={[{ label: "About" }]} />
+      <AboutBlock full />
+      <StatsStrip />
+      <WhyChoose />
+      <Credentials />
+      <CtaBand />
+    </>
+  );
+}
