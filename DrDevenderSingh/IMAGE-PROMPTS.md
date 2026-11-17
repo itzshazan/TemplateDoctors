@@ -14,7 +14,12 @@ Your doctor sheet (MBBS, MS General Surgery; 9 years per Bajaj Finserv Health; S
 | --- | --- | --- |
 | `ward.jpg` | Welcome, hospital page, gallery | **Real photo** uploaded by the listing owner on Google Maps (Apr 2021), a hospital ward |
 | `hero-1/2/3.jpg`, `feature.jpg`, `welcome-1.jpg`, `page-header.jpg` | Banner, sections | AI-generated (faces covered or not shown) |
-| `svc-*.jpg`, `doctor.jpg` | Service pages, doctor section | **Temporary crops** of the images above. Figma AI credits ran out mid-build; replace with dedicated images |
+| `svc-lap.jpg` | Hernia / keyhole surgery | AI-generated: laparoscopic instruments and camera monitor in theatre (no faces) |
+| `svc-ultrasound.jpg` | Gallbladder stones | AI-generated: ultrasound under the right rib cage (doctor's face not shown) |
+| `svc-consult.jpg` | Appendicitis | AI-generated: abdominal examination (doctor shown from the chest down) |
+| `svc-consult-2.jpg` | Piles, breast lumps | AI-generated: couple in consultation, doctor seen from behind |
+| `svc-dressing.jpg` | Lipoma, wounds, diabetic foot | AI-generated: sterile dressing being applied (hands only) |
+| `doctor.jpg` | Doctor section | AI-generated: surgeon in green scrubs seen from behind. Replace with a real portrait when available |
 
 ## Content checklist (confirm before going live)
 
