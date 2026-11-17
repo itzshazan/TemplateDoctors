@@ -195,9 +195,9 @@ export type GalleryItem = { src: string; alt: string };
 // reception.jpg is from the clinic's Google Maps listing; the rest are AI-generated (not this clinic).
 export const gallery: GalleryItem[] = [
   { src: `${IMG}/reception.jpg`, alt: "Clinic" },
-  { src: `${IMG}/g-ultrasound.jpg`, alt: "Scans & guidance" },
-  { src: `${IMG}/g-consultation.jpg`, alt: "Consultation" },
-  { src: `${IMG}/g-bp-check.jpg`, alt: "Pregnancy check-up" },
+  { src: `${IMG}/g-ultrasound.jpg`, alt: "Follicle monitoring scan" },
+  { src: `${IMG}/g-consultation.jpg`, alt: "Fertility consultation" },
+  { src: `${IMG}/g-bp-check.jpg`, alt: "First pregnancy scan" },
   { src: `${IMG}/g-reception.jpg`, alt: "Reception" },
   { src: `${IMG}/g-waiting.jpg`, alt: "Waiting area" },
 ];

@@ -13,7 +13,12 @@ Your doctor sheet (Practo-based: education, clinics, timings, awards, membership
 | File | Where | Source |
 | --- | --- | --- |
 | `reception.jpg` | "Why choose" band, gallery | Main photo on the Google Maps listing (2017). **Confirm** it shows the IVY Health clinic |
-| `hero.jpg`, `about.jpg`, `g-*.jpg` | Hero, About, gallery | AI-generated. **Temporary:** reused from the Dr. Sunita set because Figma AI credits ran out. Replace with IVF-specific images |
+| `hero.jpg` | Hero | AI-generated: expecting couple holding baby shoes, lavender tones |
+| `about.jpg` | About | AI-generated: IVF embryology lab, microscope and embryo on screen (hands only) |
+| `g-ultrasound.jpg` | Gallery | AI-generated: follicle-monitoring ultrasound room |
+| `g-consultation.jpg` | Gallery | AI-generated: couple in a fertility consultation (doctor's face not shown) |
+| `g-bp-check.jpg` | Gallery | AI-generated: couple holding a first pregnancy scan |
+| `g-reception.jpg`, `g-waiting.jpg` | Gallery | AI-generated: lavender reception desk and waiting lounge. Replace with real clinic photos when available |
 
 ## Content checklist (confirm before going live)
 

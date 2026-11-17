@@ -76,7 +76,7 @@ export function Hero() {
         </div>
         <div className="hero-media reveal">
           <div className="hero-frame">
-            <img src={site.heroImage} alt="Expecting mother" width={520} height={560} />
+            <img src={site.heroImage} alt="Couple expecting a baby" width={520} height={560} />
           </div>
           <div className="float-card fc-1">
             <span><Icon name="pin" size={20} /></span>
@@ -123,7 +123,7 @@ export function AboutBlock({ full = false }: { full?: boolean }) {
       <div className="container about-grid">
         <div className="about-media reveal">
           <div className="about-ring" />
-          <img src={site.aboutImage} alt="Consultation" width={520} height={560} />
+          <img src={site.aboutImage} alt="IVF embryology lab" width={520} height={560} />
           {site.experienceYears > 0 && (
             <div className="exp-badge">
               <strong>{site.experienceYears}+</strong>
