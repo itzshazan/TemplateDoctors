@@ -2,10 +2,11 @@ import { Header } from "@/components/Header";
 import { HeroSlider } from "@/components/HeroSlider";
 import { ContactForm } from "@/components/ContactForm";
 import { Icon } from "@/components/Icon";
-import { Logo } from "@/components/Art";
+import { DoctorPhoto, Logo } from "@/components/Art";
 import {
   site,
   doctor,
+  experienceYears,
   images,
   navLinks,
   flipCards,
@@ -104,6 +105,28 @@ export default function Home() {
             </div>
           </div>
 
+          <div className="container">
+            <div className="founder-card">
+              <div className="founder-text">
+                <h3>
+                  {doctor.name} – Family Physician & Child Specialist in {site.area}
+                </h3>
+                <p>
+                  {doctor.name} has been practising medicine since {site.practisingSince}, bringing over{" "}
+                  {experienceYears} years of experience in general medicine, family healthcare and child healthcare.
+                  He is known for practical, family-oriented care: treating everyday illnesses in adults and children,
+                  keeping vaccinations on schedule, handling minor procedures and arranging routine tests, all at{" "}
+                  {site.name}.
+                </p>
+                <a href="#contact" className="btn btn-dark">
+                  Book a Visit
+                </a>
+              </div>
+              <div className="founder-avatar">
+                <DoctorPhoto name={doctor.name} photo={doctor.photo} />
+              </div>
+            </div>
+          </div>
         </section>
 
         {/* General consultations */}

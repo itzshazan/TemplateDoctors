@@ -2,8 +2,10 @@ import { Header } from "@/components/Header";
 import { HeroSlider } from "@/components/HeroSlider";
 import { ContactForm } from "@/components/ContactForm";
 import { Icon } from "@/components/Icon";
-import { Logo } from "@/components/Art";
-import { site, images, navLinks, careFocus, childServices } from "@/data/site";
+import { Avatar, Logo } from "@/components/Art";
+import { site, images, navLinks, careFocus, childServices, doctors } from "@/data/site";
+
+const founder = doctors[0];
 
 function Heading({
   eyebrow,
@@ -61,6 +63,27 @@ export default function Home() {
             </div>
           </div>
 
+          <div className="container">
+            <div className="founder-card">
+              <div className="founder-text">
+                <h3>
+                  {founder.name} – Paediatrician in Sector 48, Gurugram
+                </h3>
+                <p>
+                  {founder.name}
+                  {founder.degree ? ` (${founder.degree})` : ""} is a paediatrician caring for newborns, children and
+                  teenagers at JMD Galleria, Sohna Road. Parents rate the clinic {site.rating}★ on Google for its calm,
+                  child-friendly approach and clear advice.
+                </p>
+                <a href="#contact" className="btn btn-dark">
+                  Book a Visit
+                </a>
+              </div>
+              <div className="founder-avatar">
+                <Avatar name={founder.name} />
+              </div>
+            </div>
+          </div>
         </section>
 
         {/* Services */}
