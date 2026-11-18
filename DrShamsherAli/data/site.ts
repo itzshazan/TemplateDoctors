@@ -69,11 +69,7 @@ export const images = {
 export const navLinks = [
   { id: "home", label: "Home" },
   { id: "about", label: "About" },
-  { id: "child-care", label: "Child Care" },
   { id: "services", label: "Services" },
-  { id: "doctor", label: "Meet the Doctor" },
-  { id: "procedures", label: "Procedures & Tests" },
-  { id: "tips", label: "Health Tips" },
   { id: "contact", label: "Contact" },
 ];
 
@@ -148,6 +144,9 @@ export const generalServices = [
   { title: "Allergies", note: "Seasonal and recurring allergies", icon: "leaf" },
   { title: "Eczema", note: "Relief and long-term skin care", icon: "droplet" },
   { title: "Skin Infections", note: "Bacterial, fungal and other infections", icon: "shield" },
+  { title: "Child Care & Vaccinations", note: "Check-ups, vaccines and childhood illnesses", icon: "baby" },
+  { title: "Minor Procedures", note: "Dressings, wound care and small procedures", icon: "scissors" },
+  { title: "Routine Tests", note: "Blood tests and health check-ups arranged", icon: "flask" },
 ];
 
 export const childServices = [
