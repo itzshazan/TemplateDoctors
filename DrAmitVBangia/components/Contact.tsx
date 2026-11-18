@@ -136,15 +136,6 @@ export default function Contact() {
             )}
           </form>
         </div>
-
-        <div className="map">
-          <iframe
-            title="Clinic location map"
-            src={`https://www.google.com/maps?q=${encodeURIComponent(clinics[0].mapQuery)}&output=embed`}
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          />
-        </div>
       </div>
     </section>
   );

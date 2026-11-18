@@ -51,12 +51,7 @@ export const clinics: Clinic[] = [
 export const navLinks = [
   { href: "#home", label: "Home" },
   { href: "#about", label: "About" },
-  { href: "#treatments", label: "Treatments" },
-  { href: "#why-us", label: "Why Dr. Bangia" },
-  { href: "#visit", label: "Your Visit" },
-  { href: "#clinic", label: "Clinic" },
-  { href: "#skin-tips", label: "Skin Tips" },
-  { href: "#faq", label: "FAQ" },
+  { href: "#treatments", label: "Services" },
   { href: "#contact", label: "Contact" },
 ];
 

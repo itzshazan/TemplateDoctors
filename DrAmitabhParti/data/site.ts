@@ -45,11 +45,7 @@ export const contact = {
 export const navLinks = [
   { id: "home", label: "Home" },
   { id: "about", label: "About" },
-  { id: "expertise", label: "Expertise" },
-  { id: "research", label: "Research" },
-  { id: "media", label: "Media" },
-  { id: "writing", label: "Writing" },
-  { id: "faq", label: "FAQs" },
+  { id: "services", label: "Services" },
   { id: "contact", label: "Contact" },
 ];
 
