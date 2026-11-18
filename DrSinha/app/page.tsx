@@ -1,14 +1,4 @@
-import {
-  AboutBlock,
-  Credentials,
-  FaqSection,
-  GallerySection,
-  Hero,
-  PriorityBand,
-  Specialities,
-  Testimonials,
-  WhyChoose,
-} from "@/components/Sections";
+import { AboutBlock, CtaBand, Hero, Specialities } from "@/components/Sections";
 
 export default function Home() {
   return (
@@ -16,12 +6,7 @@ export default function Home() {
       <Hero />
       <AboutBlock />
       <Specialities />
-      <PriorityBand />
-      <WhyChoose />
-      <Credentials />
-      <GallerySection />
-      <Testimonials />
-      <FaqSection />
+      <CtaBand />
     </>
   );
 }

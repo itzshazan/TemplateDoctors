@@ -535,15 +535,9 @@ export const faqs = [
   },
 ];
 
-export const navLinks = [
+export const navLinks: { href: string; label: string; children?: { href: string; label: string }[] }[] = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
-  { href: "/services", label: "Services", children: services.map((s) => ({ href: `/services/${s.slug}`, label: s.title })) },
-  {
-    href: "/conditions",
-    label: "Eye Conditions",
-    children: conditions.map((c) => ({ href: `/conditions/${c.slug}`, label: c.title })),
-  },
-  { href: "/gallery", label: "Gallery" },
+  { href: "/services", label: "Services" },
   { href: "/contact", label: "Contact" },
 ];

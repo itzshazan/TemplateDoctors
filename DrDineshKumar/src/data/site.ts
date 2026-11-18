@@ -55,40 +55,8 @@ const links = (pairs: [string, string][]): NavItem[] => pairs.map(([label, slug]
 
 export const navigation: NavItem[] = [
   { label: "Home", to: "/" },
-  {
-    label: "About",
-    children: links([
-      ["Our Clinic", "about-kashvi-mediclinic"],
-      ["Doctor Profile", "dr-dinesh-kumar-general-physician-diabetologist-gurugram"],
-      ["FAQs", "faqs"],
-      ["Gallery", "gallery"],
-    ]),
-  },
-  {
-    label: "Services",
-    to: "/service",
-    children: [
-      {
-        label: "Diabetes & Hormones",
-        children: links([
-          ["Diabetes Care", "diabetes-treatment-gurugram"],
-          ["Thyroid Disorders", "thyroid-treatment-gurugram"],
-          ["Cholesterol & Heart Risk", "cholesterol-heart-risk-gurugram"],
-        ]),
-      },
-      {
-        label: "General Medicine",
-        children: links([
-          ["High Blood Pressure", "high-blood-pressure-treatment-gurugram"],
-          ["Fever & Infections", "fever-infection-treatment-gurugram"],
-          ["Cough, Cold & Breathing Problems", "cough-breathing-problems-gurugram"],
-          ["Stomach & Digestive Problems", "stomach-digestive-problems-gurugram"],
-          ["Health Check-ups", "health-checkup-gurugram"],
-        ]),
-      },
-    ],
-  },
-  { label: "Health Tips", to: "/blogs" },
+  { label: "About", to: "/dr-dinesh-kumar-general-physician-diabetologist-gurugram" },
+  { label: "Services", to: "/service" },
   { label: "Contact", to: "/contact-us" },
 ];
 

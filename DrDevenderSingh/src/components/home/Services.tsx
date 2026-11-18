@@ -55,10 +55,10 @@ export default function Services() {
                   </div>
                   <div className="service-card__body">
                     <h3>
-                      <Link href={s.to}>{s.title}</Link>
+                      <Link href="/service">{s.title}</Link>
                     </h3>
                     <p>{s.text}</p>
-                    <Link href={s.to} className="service-card__more" aria-label={`Read more about ${s.title}`}>
+                    <Link href="/service" className="service-card__more" aria-label={`Read more about ${s.title}`}>
                       <ArrowRightIcon size={18} />
                     </Link>
                   </div>

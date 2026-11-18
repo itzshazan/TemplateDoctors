@@ -1,13 +1,10 @@
 import Link from "next/link";
 import { BannerSlider } from "@/components/BannerSlider";
-import { PostCard } from "@/components/Blog";
 import { Carousel } from "@/components/Carousel";
-import { ContactSection, MapEmbed } from "@/components/ContactSection";
+import { ContactSection } from "@/components/ContactSection";
 import { Icon } from "@/components/Icons";
 import { Photo } from "@/components/Photo";
-import { VideoCard } from "@/components/VideoCard";
-import { posts } from "@/data/blog";
-import { contact, doctor, doctorBio, images, patientInfo, services, stats, welcome } from "@/data/site";
+import { contact, doctor, doctorBio, images, services, stats, welcome } from "@/data/site";
 import { asset, resolveAsset } from "@/lib/assets";
 
 export default function HomePage() {
@@ -19,11 +16,6 @@ export default function HomePage() {
     href: "/services",
   }));
 
-  const [featured, ...rest] = posts;
-  // Latest post, plus two evergreen posts.
-  const sidePosts = ["pcos-symptoms-and-treatment", "anaemia-and-iron-for-women"]
-    .map((slug) => rest.find((p) => p.slug === slug))
-    .filter((p) => p !== undefined);
 
   return (
     <>
@@ -97,9 +89,6 @@ export default function HomePage() {
                   </span>
                 )}
               </a>
-              <Link className="btn1" href="/blog">
-                Health Tips for Women
-              </Link>
             </div>
           </div>
           <div className="dr-img">
@@ -119,63 +108,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="patient-info-area">
-        <div className="lay-width">
-          <h2>Patients Information</h2>
-          <ul>
-            {patientInfo.map((p, i) => {
-              const img = resolveAsset(p.image);
-              return (
-              <li key={p.title}>
-                <span className={`pi-badge${i % 2 ? " alt" : ""}`}>
-                  {img ? (
-                    // eslint-disable-next-line @next/next/no-img-element
-                    <img src={img} alt="" />
-                  ) : (
-                    <Icon name={p.icon} size={44} />
-                  )}
-                </span>
-                <h3>{p.title}</h3>
-              </li>
-              );
-            })}
-          </ul>
-        </div>
-      </section>
-
-      {images.testimonialVideos.length > 0 && (
-        <section className="testimonial-area">
-          <div className="lay-width">
-            <h2>See What Our Patients Have to Say</h2>
-            <div className="video-grid">
-              {images.testimonialVideos.map((src, i) => (
-                <div className="video-frame" key={src}>
-                  <VideoCard src={src} label={`Patient testimonial video ${i + 1}`} />
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
-
-      <section className="blog-area home-blog">
-        <div className="lay-width">
-          <h2>Latest Blog</h2>
-          <div className="bslider">
-            <ul className="blogleft">
-              <PostCard post={featured} showDate={false} />
-            </ul>
-            <ul className="blogright">
-              {sidePosts.map((p) => (
-                <PostCard key={p.slug} post={p} showExcerpt={false} showDate={false} />
-              ))}
-            </ul>
-          </div>
-        </div>
-      </section>
-
       <ContactSection />
-      <MapEmbed />
     </>
   );
 }

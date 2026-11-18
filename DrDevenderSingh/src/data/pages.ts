@@ -21,7 +21,7 @@ export const gridPages: GridPage[] = [
     title: "Surgeries & Treatments",
     sub: "What we treat",
     intro: "General and laparoscopic surgery by Dr. Devender Singh at Siyaram Multi-Speciality Hospital, NIT, Faridabad.",
-    cards: services.map((s) => ({ title: s.title, image: s.images[0], link: s.path, text: s.summary })),
+    cards: services.map((s) => ({ title: s.title, image: s.images[0], link: "", text: s.summary })),
   },
 ];
 

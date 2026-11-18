@@ -35,9 +35,7 @@ export const images = {
 export const navLinks = [
   { id: "home", label: "Home" },
   { id: "about", label: "About" },
-  { id: "child-care", label: "Child Care" },
-  { id: "women-care", label: "Vaccination" },
-  { id: "blog", label: "Parent Tips" },
+  { id: "services", label: "Services" },
   { id: "contact", label: "Contact" },
 ];
 
@@ -116,6 +114,7 @@ export const childServices = [
   { title: "Stomach Problems", note: "Loose motions, vomiting & dehydration" },
   { title: "Nutrition & Growth", note: "Picky eating, weight & height concerns" },
   { title: "Development Milestones", note: "Speech, motor & behaviour checks" },
+  { title: "Vaccinations", note: "Birth to 18 years, as per the IAP schedule" },
 ];
 
 /** Shown in the second services grid (Vaccination & newborn). */

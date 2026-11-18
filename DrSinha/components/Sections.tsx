@@ -1,22 +1,6 @@
 import Link from "next/link";
 import Icon from "@/components/Icon";
-import { CredentialTabs, GalleryGrid, TestimonialSlider } from "@/components/Interactive";
-import {
-  about,
-  conditions,
-  credentials,
-  faqs,
-  gallery,
-  hasPhone,
-  hero,
-  otherPractice,
-  services,
-  site,
-  stats,
-  testimonials,
-  whatsappLink,
-  whyChoose,
-} from "@/data/content";
+import { about, hasPhone, hero, otherPractice, services, site, whatsappLink } from "@/data/content";
 
 /** Primary call-to-action: call if a phone number exists, otherwise directions. */
 export function PrimaryCta({ className = "btn btn-red" }: { className?: string }) {
@@ -109,24 +93,6 @@ export function AboutBlock({ full = false }: { full?: boolean }) {
   );
 }
 
-export function StatsStrip() {
-  return (
-    <section className="stats">
-      <div className="container stats-grid">
-        {stats.map((s) => (
-          <div key={s.label} className="stat reveal">
-            <strong>
-              {s.value}
-              {s.suffix}
-            </strong>
-            <span>{s.label}</span>
-          </div>
-        ))}
-      </div>
-    </section>
-  );
-}
-
 export function Specialities({ title = true }: { title?: boolean }) {
   return (
     <section className="section specialities">
@@ -139,158 +105,13 @@ export function Specialities({ title = true }: { title?: boolean }) {
         )}
         <div className="spec-grid">
           {services.map((s, i) => (
-            <Link key={s.slug} href={`/services/${s.slug}`} className={`spec-card reveal ${i === 0 ? "is-featured" : ""}`}>
+            <div key={s.slug} className={`spec-card reveal ${i === 0 ? "is-featured" : ""}`}>
               <span className="spec-icon">
                 <Icon name={s.icon} size={52} />
               </span>
               <h3>{s.title}</h3>
               <p>{s.short}</p>
-              <span className="read-more">
-                Read More <Icon name="arrow" size={16} />
-              </span>
-            </Link>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-export function PriorityBand() {
-  return (
-    <section className="priority">
-      <div className="container priority-grid">
-        <div className="priority-media reveal">
-          <img src={site.priorityImage} alt="Eye clinic waiting area" width={520} height={360} />
-        </div>
-        <div className="priority-copy reveal">
-          <h2>Your Vision Is Our Priority</h2>
-          {hasPhone && (
-            <p className="icon-line">
-              <Icon name="phone" size={18} /> <a href={site.phoneHref}>{site.phone}</a>
-            </p>
-          )}
-          <p className="icon-line">
-            <Icon name="pin" size={18} /> {site.clinic}, {site.address}
-          </p>
-          <p>
-            From a simple power check to cataract, glaucoma and eyelid care, every patient receives an honest diagnosis and
-            treatment backed by {site.experienceYears} years of experience.
-          </p>
-          <Link className="btn btn-red" href="/contact">
-            Contact Us
-          </Link>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-export function WhyChoose() {
-  return (
-    <section className="section why">
-      <div className="container why-grid">
-        <div className="why-copy reveal">
-          <h4 className="eyebrow">{whyChoose.eyebrow}</h4>
-          <h2>{whyChoose.title}</h2>
-          <p>{whyChoose.text}</p>
-        </div>
-        <div className="why-points">
-          {whyChoose.points.map((p) => (
-            <div key={p.title} className="why-point reveal">
-              <span className="why-icon">
-                <Icon name={p.icon} size={46} />
-              </span>
-              <div>
-                <h3>{p.title}</h3>
-                <p>{p.text}</p>
-              </div>
             </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-export function Credentials() {
-  return (
-    <section className="section credentials">
-      <div className="container">
-        <h4 className="eyebrow reveal">Qualifications & Experience</h4>
-        <p className="cred-intro reveal">
-          <strong>{site.fullName}</strong> {credentials.intro.replace(site.fullName, "").trim()}
-        </p>
-        <CredentialTabs tabs={credentials.tabs} />
-      </div>
-    </section>
-  );
-}
-
-export function GallerySection({ limit }: { limit?: number }) {
-  const items = limit ? gallery.slice(0, limit) : gallery;
-  return (
-    <section className="section gallery">
-      <div className="container">
-        <h2 className="center red-title reveal">Gallery</h2>
-        <GalleryGrid items={items} />
-      </div>
-    </section>
-  );
-}
-
-export function Testimonials() {
-  return (
-    <section className="section testimonials">
-      <div className="container t-grid">
-        <div className="t-copy reveal">
-          <h4 className="eyebrow">Testimonials</h4>
-          <h2>What Our Patients Say</h2>
-          <p>
-            {site.name} is known for careful eye examinations, clear explanations and a calm, reassuring manner. Patients
-            appreciate being told honestly what their eyes need – and what they don&apos;t.
-          </p>
-        </div>
-        {testimonials.length > 0 ? (
-          <TestimonialSlider items={testimonials} />
-        ) : (
-          <div className="t-card t-empty reveal">
-            <span className="t-badge">
-              <Icon name="quote" size={26} />
-            </span>
-            <div className="stars" aria-hidden="true">
-              {Array.from({ length: 5 }).map((_, k) => (
-                <Icon key={k} name="star" size={18} />
-              ))}
-            </div>
-            <p className="t-quote">Visited {site.clinic}? Your feedback helps other patients find trusted eye care.</p>
-            <a className="btn btn-navy" href={site.mapsUrl} target="_blank" rel="noopener noreferrer">
-              Read & write reviews on Google
-            </a>
-          </div>
-        )}
-      </div>
-    </section>
-  );
-}
-
-export function FaqSection() {
-  return (
-    <section className="section faq">
-      <div className="container faq-grid">
-        <div className="reveal">
-          <h4 className="eyebrow">FAQ</h4>
-          <h2>Before Your Visit</h2>
-          <p>Answers to the questions patients ask most often. For anything else, please visit or contact the clinic.</p>
-        </div>
-        <div className="faq-list">
-          {faqs.map((f) => (
-            <details key={f.q} className="reveal">
-              <summary>
-                {f.q} <Icon name="chevron" size={18} />
-              </summary>
-              <p>{f.a}</p>
-            </details>
           ))}
         </div>
       </div>
@@ -382,14 +203,6 @@ export function ContactBlock() {
             </div>
           </div>
         </div>
-        <div className="map reveal">
-          <iframe
-            title={`Map to ${site.clinic}`}
-            src={site.mapEmbed}
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          />
-        </div>
       </div>
     </section>
   );
@@ -433,17 +246,7 @@ export function Footer() {
           <ul>
             {services.slice(0, 5).map((s) => (
               <li key={s.slug}>
-                <Link href={`/services/${s.slug}`}>{s.title}</Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-        <div>
-          <h4>Eye Conditions</h4>
-          <ul>
-            {conditions.slice(0, 7).map((c) => (
-              <li key={c.slug}>
-                <Link href={`/conditions/${c.slug}`}>{c.title}</Link>
+                <Link href="/services">{s.title}</Link>
               </li>
             ))}
           </ul>
@@ -454,8 +257,6 @@ export function Footer() {
             <li><Link href="/">Home</Link></li>
             <li><Link href="/about">About</Link></li>
             <li><Link href="/services">Services</Link></li>
-            <li><Link href="/conditions">Eye Conditions</Link></li>
-            <li><Link href="/gallery">Gallery</Link></li>
             <li><Link href="/contact">Contact</Link></li>
           </ul>
         </div>

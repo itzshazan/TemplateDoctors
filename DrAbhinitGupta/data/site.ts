@@ -42,12 +42,8 @@ export const contact = {
 export const navLinks = [
   { id: "home", label: "Home" },
   { id: "about", label: "About" },
-  { id: "expertise", label: "Expertise" },
-  { id: "research", label: "Awards" },
-  { id: "media", label: "In the News" },
-  { id: "writing", label: "Heart Health" },
-  { id: "faq", label: "FAQs" },
-  { id: "clinic", label: "OPD Timings" },
+  { id: "services", label: "Services" },
+  { id: "contact", label: "Contact" },
 ];
 
 export const heroSlides = [

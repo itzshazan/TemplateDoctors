@@ -50,40 +50,8 @@ const links = (pairs: [string, string][]): NavItem[] => pairs.map(([label, slug]
 
 export const navigation: NavItem[] = [
   { label: "Home", to: "/" },
-  {
-    label: "About",
-    children: links([
-      ["The Hospital", "about-siyaram-hospital"],
-      ["Doctor Profile", "dr-devender-singh-laparoscopic-surgeon-faridabad"],
-      ["FAQs", "faqs"],
-      ["Gallery", "gallery"],
-    ]),
-  },
-  {
-    label: "Surgeries",
-    to: "/service",
-    children: [
-      {
-        label: "Laparoscopic Surgery",
-        children: links([
-          ["Hernia Repair", "hernia-surgery-faridabad"],
-          ["Gallbladder Stones", "gallbladder-stone-surgery-faridabad"],
-          ["Appendicitis", "appendix-surgery-faridabad"],
-        ]),
-      },
-      {
-        label: "General Surgery",
-        children: links([
-          ["Piles, Fissure & Fistula", "piles-fissure-fistula-treatment-faridabad"],
-          ["Lipoma & Cysts", "lipoma-cyst-removal-faridabad"],
-          ["Breast Lumps", "breast-lump-treatment-faridabad"],
-          ["Diabetic Foot & Wounds", "diabetic-foot-wound-care-faridabad"],
-          ["Abscess & Minor Procedures", "abscess-minor-surgery-faridabad"],
-        ]),
-      },
-    ],
-  },
-  { label: "Health Tips", to: "/blogs" },
+  { label: "About", to: "/dr-devender-singh-laparoscopic-surgeon-faridabad" },
+  { label: "Services", to: "/service" },
   { label: "Contact", to: "/contact-us" },
 ];
 

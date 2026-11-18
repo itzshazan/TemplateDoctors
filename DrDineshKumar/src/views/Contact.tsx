@@ -92,9 +92,6 @@ export default function Contact() {
               </div>
             </div>
           </div>
-          <div className="contact__map">
-            <iframe title="Clinic location" src={clinic.mapEmbed} loading="lazy" />
-          </div>
         </div>
       </section>
       <CtaBand />

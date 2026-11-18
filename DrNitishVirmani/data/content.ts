@@ -92,11 +92,6 @@ export const navLinks = [
   { href: "#home", label: "Home" },
   { href: "#about", label: "About" },
   { href: "#services", label: "Services" },
-  { href: "#why-us", label: "Why Us" },
-  { href: "#visit", label: "Visit" },
-  { href: "#faq", label: "FAQ" },
-  { href: "#hospital", label: "Clinic" },
-  { href: "#health-tips", label: "ENT Tips" },
   { href: "#contact", label: "Contact" },
 ];
 

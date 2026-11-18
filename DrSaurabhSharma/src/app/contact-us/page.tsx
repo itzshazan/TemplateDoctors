@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { ContactForm } from "@/components/ContactForm";
-import { MapEmbed } from "@/components/ContactSection";
 import { Icon } from "@/components/Icons";
 import { Breadcrumb, InnerBanner } from "@/components/InnerBanner";
 import { canContact, clinics, contact, images } from "@/data/site";
@@ -21,7 +20,6 @@ export default function ContactPage() {
           <div className="clinic-cards">
             {clinics.map((c) => (
               <div key={c.name} className="clinic-col">
-              <MapEmbed src={c.mapEmbed} title={c.name} height={300} className="clinic-map" />
               <ul className="clinic-card">
                 <li>
                   <span className="icn"><Icon name="pin" size={22} /></span>

@@ -67,7 +67,7 @@ export default function Footer() {
             <ul className="footer-list">
               {services.map((s) => (
                 <li key={s.to}>
-                  <Link href={s.to}>{s.title}</Link>
+                  <Link href="/service">{s.title}</Link>
                 </li>
               ))}
             </ul>

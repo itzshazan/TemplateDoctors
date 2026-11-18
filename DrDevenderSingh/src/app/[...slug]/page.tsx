@@ -2,11 +2,13 @@ import type { Metadata } from "next";
 import RouteResolver from "../../views/RouteResolver";
 import { allRoutePaths, resolveRoute, routeTitle } from "../../views/resolveRoute";
 
+export const dynamicParams = false;
+
 type Params = Promise<{ slug: string[] }>;
 
 const toPath = (slug: string[]) => "/" + slug.map(decodeURIComponent).join("/");
 
-/** Pre-render every known page (services, about pages, hub pages, blog listings and posts). */
+/** Pre-render every known page (doctor profile and services). */
 export function generateStaticParams() {
   return allRoutePaths().map((path) => ({ slug: path.slice(1).split("/") }));
 }

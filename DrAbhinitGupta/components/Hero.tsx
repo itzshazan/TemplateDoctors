@@ -26,8 +26,8 @@ export default function Hero() {
                 <a href={contact.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
                   Book at Regency <Icon name="external" size={18} />
                 </a>
-                <a href="#clinic" className="btn btn-ghost">
-                  OPD Timings <Icon name="arrow" size={18} />
+                <a href="#contact" className="btn btn-ghost">
+                  Contact <Icon name="arrow" size={18} />
                 </a>
               </div>
             </div>

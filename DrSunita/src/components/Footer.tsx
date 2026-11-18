@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { doctor } from "@/data/site";
 
 export function Footer() {
@@ -6,10 +5,7 @@ export function Footer() {
     <footer className="footer">
       <div className="lay-width">
         <p>
-          Copyright © {new Date().getFullYear()} {doctor.name} All Rights Reserved |{" "}
-          <Link href="/terms-of-use-disclaimer" className="footer-terms">
-            Terms of Use/Disclaimer
-          </Link>
+          Copyright © {new Date().getFullYear()} {doctor.name} All Rights Reserved
         </p>
       </div>
     </footer>

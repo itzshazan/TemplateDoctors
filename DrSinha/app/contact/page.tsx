@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { ContactBlock, FaqSection, PageBanner } from "@/components/Sections";
+import { ContactBlock, PageBanner } from "@/components/Sections";
 import { site } from "@/data/content";
 
 export const metadata: Metadata = {
@@ -12,7 +12,6 @@ export default function ContactPage() {
     <>
       <PageBanner title="Contact Us" crumbs={[{ label: "Contact" }]} />
       <ContactBlock />
-      <FaqSection />
     </>
   );
 }

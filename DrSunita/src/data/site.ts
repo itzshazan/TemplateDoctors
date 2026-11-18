@@ -264,12 +264,9 @@ export const testimonials: { quote: string; name: string }[] = [];
 
 export const nav = [
   { href: "/", label: "Home" },
-  { href: "/meet-the-doctor", label: "Meet The Doctor" },
-  { href: "/services", label: "Our Services", children: true },
-  { href: "/testimonials", label: "Patients Testimonials" },
-  { href: "/gallery", label: "Gallery" },
-  { href: "/blog", label: "Health Tips" },
-  { href: "/contact-us", label: "Contact Us" },
+  { href: "/meet-the-doctor", label: "About" },
+  { href: "/services", label: "Services", children: true },
+  { href: "/contact-us", label: "Contact" },
 ] as const;
 
 // CONFIRM: the final domain for this site.

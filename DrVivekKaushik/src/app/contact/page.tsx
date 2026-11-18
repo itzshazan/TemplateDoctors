@@ -45,10 +45,6 @@ export default function ContactPage() {
           <ContactForm />
         </div>
       </section>
-
-      <section className="map">
-        <iframe src={SITE.mapEmbed} title="Clinic location" loading="lazy" referrerPolicy="no-referrer-when-downgrade" />
-      </section>
     </>
   );
 }

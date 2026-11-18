@@ -1,22 +1,6 @@
 import Link from "next/link";
 import Icon from "@/components/Icon";
-import { GalleryGrid } from "@/components/Interactive";
-import {
-  about,
-  faqs,
-  features,
-  gallery,
-  hasPhone,
-  hero,
-  lifeStages,
-  services,
-  site,
-  testimonials,
-  tips,
-  visitSteps,
-  whatsappLink,
-  whyChoose,
-} from "@/data/content";
+import { about, hasPhone, hero, services, site, whatsappLink } from "@/data/content";
 
 export function PrimaryCta({ className = "btn btn-primary" }: { className?: string }) {
   return hasPhone ? (
@@ -99,24 +83,6 @@ export function Hero() {
   );
 }
 
-export function Features() {
-  return (
-    <section className="features">
-      <div className="container features-grid">
-        {features.map((f) => (
-          <div key={f.title} className="feature reveal">
-            <span className="feature-icon"><Icon name={f.icon} size={30} /></span>
-            <div>
-              <h3>{f.title}</h3>
-              <p>{f.text}</p>
-            </div>
-          </div>
-        ))}
-      </div>
-    </section>
-  );
-}
-
 export function AboutBlock({ full = false }: { full?: boolean }) {
   return (
     <section className="section about">
@@ -166,12 +132,11 @@ export function ServicesGrid({ limit }: { limit?: number }) {
         />
         <div className="service-grid">
           {list.map((s) => (
-            <Link key={s.slug} href={`/services/${s.slug}`} className="service-card reveal">
+            <div key={s.slug} className="service-card reveal">
               <span className="service-icon"><Icon name={s.icon} size={34} /></span>
               <h3>{s.title}</h3>
               <p>{s.short}</p>
-              <span className="more">Learn more <Icon name="arrow" size={15} /></span>
-            </Link>
+            </div>
           ))}
         </div>
         {limit && (
@@ -179,154 +144,6 @@ export function ServicesGrid({ limit }: { limit?: number }) {
             <Link className="btn btn-outline" href="/services">View All Services</Link>
           </div>
         )}
-      </div>
-    </section>
-  );
-}
-
-export function LifeStages() {
-  return (
-    <section className="section stages">
-      <div className="container">
-        <Heading eyebrow="Care For Every Stage" title="Your Health Partner Through Life" />
-        <ol className="stage-line">
-          {lifeStages.map((s, i) => (
-            <li key={s.stage} className="stage reveal">
-              <span className="stage-icon"><Icon name={s.icon} size={28} /></span>
-              <span className="stage-no">0{i + 1}</span>
-              <h3>{s.stage}</h3>
-              <p>{s.text}</p>
-            </li>
-          ))}
-        </ol>
-      </div>
-    </section>
-  );
-}
-
-export function WhyChoose() {
-  return (
-    <section className="why">
-      <Wave className="wave-top" fill="#fff" />
-      <div className="container why-grid">
-        <div className="why-media reveal">
-          <img src={site.whyImage} alt={site.clinic} width={520} height={440} />
-        </div>
-        <div>
-          <Heading eyebrow={`Why ${site.clinic}`} title="Care That Puts You At Ease" light />
-          <div className="why-list">
-            {whyChoose.map((w) => (
-              <div key={w.title} className="why-item reveal">
-                <span><Icon name={w.icon} size={24} /></span>
-                <div>
-                  <h3>{w.title}</h3>
-                  <p>{w.text}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-      <Wave fill="#fff" />
-    </section>
-  );
-}
-
-export function VisitSteps() {
-  return (
-    <section className="section visit">
-      <div className="container">
-        <Heading eyebrow="Plan Your Visit" title="Visiting The Clinic Is Simple" />
-        <div className="visit-grid">
-          {visitSteps.map((v, i) => (
-            <div key={v.title} className="visit-card reveal">
-              <span className="visit-no">{i + 1}</span>
-              <h3>{v.title}</h3>
-              <p>{v.text}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-export function Tips() {
-  return (
-    <section className="section tips">
-      <div className="container">
-        <Heading eyebrow="Health Tips" title="Small Habits, Healthier You" />
-        <div className="tips-grid">
-          {tips.map((t) => (
-            <article key={t.title} className="tip reveal">
-              <span className="tip-icon"><Icon name={t.icon} size={28} /></span>
-              <h3>{t.title}</h3>
-              <p>{t.text}</p>
-            </article>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-export function GallerySection() {
-  return (
-    <section className="section gallery">
-      <div className="container">
-        <Heading eyebrow="Gallery" title="Caring For Every Woman" />
-        <GalleryGrid items={gallery} />
-      </div>
-    </section>
-  );
-}
-
-export function Reviews() {
-  return (
-    <section className="section reviews">
-      <div className="container">
-        <Heading eyebrow="Patient Stories" title="What Our Patients Say" />
-        {testimonials.length > 0 ? (
-          <div className="review-grid">
-            {testimonials.map((t) => (
-              <figure key={t.name} className="review reveal">
-                <Icon name="quote" size={30} />
-                <blockquote>{t.quote}</blockquote>
-                <figcaption>{t.name}</figcaption>
-              </figure>
-            ))}
-          </div>
-        ) : (
-          <div className="review-empty reveal">
-            <div className="stars" aria-hidden="true">
-              {Array.from({ length: 5 }).map((_, k) => <Icon key={k} name="star" size={22} />)}
-            </div>
-            <p>Have you visited {site.clinic}? Share your experience on Google – it helps other women find the care they need.</p>
-            <a className="btn btn-primary" href={site.mapsUrl} target="_blank" rel="noopener noreferrer">
-              Read & Write Reviews on Google
-            </a>
-          </div>
-        )}
-      </div>
-    </section>
-  );
-}
-
-export function FaqSection() {
-  return (
-    <section className="section faq">
-      <div className="container faq-grid">
-        <div>
-          <Heading eyebrow="FAQ" title="Questions Couples Often Ask" text="Can't find your question? Visit the clinic and ask – no question is too small." />
-        </div>
-        <div className="faq-list">
-          {faqs.map((f) => (
-            <details key={f.q} className="reveal">
-              <summary>{f.q} <span className="plus" aria-hidden="true" /></summary>
-              <p>{f.a}</p>
-            </details>
-          ))}
-        </div>
       </div>
     </section>
   );
@@ -374,8 +191,8 @@ export function ContactBlock() {
           </ul>
           <PrimaryCta />
         </div>
-        <div className="map reveal">
-          <iframe title={`Map to ${site.clinic}`} src={site.mapEmbed} loading="lazy" referrerPolicy="no-referrer-when-downgrade" />
+        <div className="contact-photo reveal">
+          <img src="/images/reception.jpg" alt={`Reception at ${site.clinic}`} loading="lazy" />
         </div>
       </div>
     </section>
@@ -447,7 +264,7 @@ export function Footer() {
           <h4>Services</h4>
           <ul>
             {services.slice(0, 6).map((s) => (
-              <li key={s.slug}><Link href={`/services/${s.slug}`}>{s.title}</Link></li>
+              <li key={s.slug}><Link href="/services">{s.title}</Link></li>
             ))}
           </ul>
         </div>
@@ -457,7 +274,6 @@ export function Footer() {
             <li><Link href="/">Home</Link></li>
             <li><Link href="/about">About</Link></li>
             <li><Link href="/services">Services</Link></li>
-            <li><Link href="/gallery">Gallery</Link></li>
             <li><Link href="/contact">Contact</Link></li>
           </ul>
         </div>

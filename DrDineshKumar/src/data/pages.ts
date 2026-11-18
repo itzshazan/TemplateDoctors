@@ -21,7 +21,7 @@ export const gridPages: GridPage[] = [
     title: "Services",
     sub: "What we treat",
     intro: "Adult general medicine and diabetes care at Kashvi Mediclinic, Sector 37D, Gurugram.",
-    cards: services.map((s) => ({ title: s.title, image: s.images[0], link: s.path, text: s.summary })),
+    cards: services.map((s) => ({ title: s.title, image: s.images[0], link: "", text: s.summary })),
   },
 ];
 

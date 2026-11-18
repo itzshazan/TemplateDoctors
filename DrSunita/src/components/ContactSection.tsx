@@ -55,24 +55,3 @@ export function ContactSection() {
   );
 }
 
-export function MapEmbed({
-  src = contact.mapEmbed,
-  title = primaryClinic.name,
-  height = 360,
-  className = "fmap",
-}: { src?: string; title?: string; height?: number; className?: string }) {
-  return (
-    <div className={className}>
-      <iframe
-        src={src}
-        title={`Map – ${title}`}
-        width="100%"
-        height={height}
-        style={{ border: 0 }}
-        allowFullScreen
-        loading="lazy"
-        referrerPolicy="no-referrer-when-downgrade"
-      />
-    </div>
-  );
-}

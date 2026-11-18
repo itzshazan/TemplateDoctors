@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { ContactSection, MapEmbed } from "@/components/ContactSection";
+import { ContactSection } from "@/components/ContactSection";
 import { Icon } from "@/components/Icons";
 import { Breadcrumb, InnerBanner } from "@/components/InnerBanner";
 import { Photo } from "@/components/Photo";
@@ -45,7 +45,6 @@ export default function MeetTheDoctorPage() {
         </div>
       </div>
       <ContactSection />
-      <MapEmbed />
     </>
   );
 }

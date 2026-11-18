@@ -2,9 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import PageBanner from "@/components/PageBanner";
 import CheckList from "@/components/CheckList";
-import Tabs from "@/components/Tabs";
 import { SITE } from "@/config/site";
-import { aboutJourney, aboutResearch } from "@/config/content";
 
 export const metadata: Metadata = {
   title: "About",
@@ -37,19 +35,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="tabs-section">
-        <div className="container">
-          <h2 className="tabs-title">Expertise &amp; Clinic</h2>
-          <Tabs tabs={aboutJourney} />
-        </div>
-      </section>
-
-      <section className="tabs-section" style={{ background: "#fff" }}>
-        <div className="container">
-          <h2 className="tabs-title">What Patients Say</h2>
-          <Tabs tabs={aboutResearch} />
-        </div>
-      </section>
     </>
   );
 }

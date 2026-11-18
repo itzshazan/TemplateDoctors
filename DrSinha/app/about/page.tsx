@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { AboutBlock, Credentials, CtaBand, PageBanner, StatsStrip, WhyChoose } from "@/components/Sections";
+import { AboutBlock, CtaBand, PageBanner } from "@/components/Sections";
 import { site } from "@/data/content";
 
 export const metadata: Metadata = {
@@ -12,9 +12,6 @@ export default function AboutPage() {
     <>
       <PageBanner title={`About ${site.name}`} crumbs={[{ label: "About" }]} />
       <AboutBlock full />
-      <StatsStrip />
-      <WhyChoose />
-      <Credentials />
       <CtaBand />
     </>
   );

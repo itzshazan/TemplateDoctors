@@ -1,11 +1,11 @@
 import Link from "next/link";
 import Icon from "./Icon";
-import { SITE, tel, treatmentPath, type SocialKey, type Treatment } from "@/config/site";
+import { SITE, tel, type SocialKey, type Treatment } from "@/config/site";
 
 const QUICK_LINKS = [
+  { label: "Home", to: "/" },
   { label: "About", to: "/about" },
-  { label: "Gallery", to: "/gallery" },
-  { label: "Emergency", to: "/emergency" },
+  { label: "Services", to: "/services" },
   { label: "Contact", to: "/contact" },
 ];
 
@@ -13,7 +13,7 @@ function TreatmentLinks({ items }: { items: Treatment[] }) {
   return (
     <ul className="footer-links">
       {items.slice(0, 6).map((t) => (
-        <li key={t.id}><Link href={treatmentPath(t)}>{t.title}</Link></li>
+        <li key={t.id}><Link href="/services">{t.title}</Link></li>
       ))}
     </ul>
   );
@@ -35,10 +35,6 @@ export default function Footer() {
           <div>
             <h4>Services</h4>
             <TreatmentLinks items={SITE.services} />
-          </div>
-          <div>
-            <h4>Conditions</h4>
-            <TreatmentLinks items={SITE.conditions} />
           </div>
           <div>
             <h4>Quick Links</h4>
