@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Icon from "@/components/Icon";
-import { about, hasPhone, hero, services, site, whatsappLink } from "@/data/content";
+import { GalleryGrid } from "@/components/Interactive";
+import { about, gallery, hasPhone, hero, services, site, whatsappLink } from "@/data/content";
 
 export function PrimaryCta({ className = "btn btn-primary" }: { className?: string }) {
   return hasPhone ? (
@@ -199,6 +200,17 @@ export function ContactBlock() {
   );
 }
 
+export function GallerySection() {
+  return (
+    <section className="section gallery">
+      <div className="container">
+        <Heading eyebrow="Gallery" title="Caring For Every Woman" />
+        <GalleryGrid items={gallery} />
+      </div>
+    </section>
+  );
+}
+
 export function PageBanner({ title, crumbs }: { title: string; crumbs: { href?: string; label: string }[] }) {
   return (
     <section className="page-banner">
@@ -274,6 +286,7 @@ export function Footer() {
             <li><Link href="/">Home</Link></li>
             <li><Link href="/about">About</Link></li>
             <li><Link href="/services">Services</Link></li>
+            <li><Link href="/gallery">Gallery</Link></li>
             <li><Link href="/contact">Contact</Link></li>
           </ul>
         </div>

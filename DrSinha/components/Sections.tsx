@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Icon from "@/components/Icon";
-import { about, hasPhone, hero, otherPractice, services, site, whatsappLink } from "@/data/content";
+import { GalleryGrid } from "@/components/Interactive";
+import { about, gallery, hasPhone, hero, otherPractice, services, site, whatsappLink } from "@/data/content";
 
 /** Primary call-to-action: call if a phone number exists, otherwise directions. */
 export function PrimaryCta({ className = "btn btn-red" }: { className?: string }) {
@@ -114,6 +115,18 @@ export function Specialities({ title = true }: { title?: boolean }) {
             </div>
           ))}
         </div>
+      </div>
+    </section>
+  );
+}
+
+export function GallerySection({ limit }: { limit?: number }) {
+  const items = limit ? gallery.slice(0, limit) : gallery;
+  return (
+    <section className="section gallery">
+      <div className="container">
+        <h2 className="center red-title reveal">Gallery</h2>
+        <GalleryGrid items={items} />
       </div>
     </section>
   );
@@ -257,6 +270,7 @@ export function Footer() {
             <li><Link href="/">Home</Link></li>
             <li><Link href="/about">About</Link></li>
             <li><Link href="/services">Services</Link></li>
+            <li><Link href="/gallery">Gallery</Link></li>
             <li><Link href="/contact">Contact</Link></li>
           </ul>
         </div>

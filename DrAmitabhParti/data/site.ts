@@ -46,6 +46,7 @@ export const navLinks = [
   { id: "home", label: "Home" },
   { id: "about", label: "About" },
   { id: "services", label: "Services" },
+  { id: "gallery", label: "Gallery" },
   { id: "contact", label: "Contact" },
 ];
 
@@ -326,3 +327,10 @@ export const clinic = {
   mapUrl: "https://www.google.com/maps/search/?api=1&query=Fortis+Memorial+Research+Institute+Gurugram",
   embed: "https://www.google.com/maps?q=Fortis+Memorial+Research+Institute+Sector+44+Gurugram&output=embed",
 };
+
+/** Gallery section on the home page. */
+export const gallery: { src: string; alt: string; position: string }[] = [
+  { src: "/images/parti-portrait.png", alt: "Dr. Amitabh Parti, Fortis Memorial Research Institute", position: "top" },
+  { src: "/images/speaking-group.jpeg", alt: "Panel discussion at SPECTRUM 2026, Gurugram", position: "center" },
+  { src: "/images/speaking.jpeg", alt: "Speakers at SPECTRUM 2026, Gurugram", position: "center" },
+];

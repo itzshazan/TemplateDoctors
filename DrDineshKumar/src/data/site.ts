@@ -57,6 +57,7 @@ export const navigation: NavItem[] = [
   { label: "Home", to: "/" },
   { label: "About", to: "/dr-dinesh-kumar-general-physician-diabetologist-gurugram" },
   { label: "Services", to: "/service" },
+  { label: "Gallery", to: "/gallery" },
   { label: "Contact", to: "/contact-us" },
 ];
 

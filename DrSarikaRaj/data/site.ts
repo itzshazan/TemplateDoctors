@@ -36,6 +36,7 @@ export const navLinks = [
   { id: "home", label: "Home" },
   { id: "about", label: "About" },
   { id: "services", label: "Services" },
+  { id: "gallery", label: "Gallery" },
   { id: "contact", label: "Contact" },
 ];
 
@@ -175,4 +176,14 @@ export const posts = [
       "Offer variety without pressure, eat together as a family and limit juice and junk. Small, steady changes work better than force-feeding.",
     image: `${IMG}/post-nutrition.jpg`,
   },
+];
+
+/** Gallery section on the home page. */
+export const gallery: { src: string; alt: string; position: string }[] = [
+  { src: "/images/play-area.jpg", alt: "Play area at the clinic", position: "center" },
+  { src: "/images/about.jpg", alt: "Child check-up", position: "center" },
+  { src: "/images/available.jpg", alt: "Caring for newborns", position: "center" },
+  { src: "/images/provide.jpg", alt: "Advice for parents", position: "center" },
+  { src: "/images/post-newborn.jpg", alt: "Newborn care", position: "center" },
+  { src: "/images/post-nutrition.jpg", alt: "Healthy eating habits", position: "center" },
 ];

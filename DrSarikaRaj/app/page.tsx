@@ -3,7 +3,7 @@ import { HeroSlider } from "@/components/HeroSlider";
 import { ContactForm } from "@/components/ContactForm";
 import { Icon } from "@/components/Icon";
 import { Avatar, Logo } from "@/components/Art";
-import { site, images, navLinks, careFocus, childServices, doctors } from "@/data/site";
+import { site, images, navLinks, careFocus, childServices, doctors, gallery } from "@/data/site";
 
 const founder = doctors[0];
 
@@ -109,6 +109,24 @@ export default function Home() {
                   </div>
                 ))}
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Gallery */}
+        <section id="gallery" className="section">
+          <div className="container">
+            <Heading eyebrow="Gallery" title="Inside the Clinic" center />
+            <div className="photo-grid">
+              {gallery.map((g) => (
+                <figure key={g.src} className="photo-item">
+                  <div className="photo-frame">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src={g.src} alt={g.alt} loading="lazy" style={{ objectPosition: g.position }} />
+                  </div>
+                  <figcaption>{g.alt}</figcaption>
+                </figure>
+              ))}
             </div>
           </div>
         </section>

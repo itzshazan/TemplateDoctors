@@ -1,8 +1,8 @@
-import { doctorProfile, gridPages, type GridPage } from "../data/pages";
+import { doctorProfile, galleryPage, gridPages, type GridPage } from "../data/pages";
 import { clinic } from "../data/site";
 
 /** Every template a URL can map to, with the data it needs. */
-export type ResolvedRoute = { kind: "doctor-profile" } | { kind: "grid"; page: GridPage } | { kind: "not-found" };
+export type ResolvedRoute = { kind: "doctor-profile" } | { kind: "gallery" } | { kind: "grid"; page: GridPage } | { kind: "not-found" };
 
 const matches = (path: string, page: { path: string; aliases?: string[] }) => page.path === path || !!page.aliases?.includes(path);
 
@@ -10,6 +10,7 @@ const matches = (path: string, page: { path: string; aliases?: string[] }) => pa
 export function resolveRoute(rawPath: string): ResolvedRoute {
   const path = decodeURIComponent(rawPath).replace(/\/+$/, "") || "/";
   if (matches(path, doctorProfile)) return { kind: "doctor-profile" };
+  if (matches(path, galleryPage)) return { kind: "gallery" };
   const grid = gridPages.find((g) => g.path === path);
   if (grid) return { kind: "grid", page: grid };
   return { kind: "not-found" };
@@ -20,6 +21,8 @@ export function routeTitle(route: ResolvedRoute): string {
   switch (route.kind) {
     case "doctor-profile":
       return doctorProfile.bannerTitle;
+    case "gallery":
+      return `${galleryPage.title} - ${clinic.doctor}`;
     case "grid":
       return `${route.page.title} - ${clinic.doctor}`;
     case "not-found":
@@ -29,5 +32,5 @@ export function routeTitle(route: ResolvedRoute): string {
 
 /** All known URLs, pre-rendered at build time. */
 export function allRoutePaths(): string[] {
-  return [doctorProfile.path, ...doctorProfile.aliases, ...gridPages.map((g) => g.path)];
+  return [doctorProfile.path, ...doctorProfile.aliases, galleryPage.path, ...gridPages.map((g) => g.path)];
 }

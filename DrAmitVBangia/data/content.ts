@@ -52,6 +52,7 @@ export const navLinks = [
   { href: "#home", label: "Home" },
   { href: "#about", label: "About" },
   { href: "#treatments", label: "Services" },
+  { href: "#clinic", label: "Clinic" },
   { href: "#contact", label: "Contact" },
 ];
 

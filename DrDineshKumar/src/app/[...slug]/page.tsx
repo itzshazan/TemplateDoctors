@@ -8,7 +8,7 @@ type Params = Promise<{ slug: string[] }>;
 
 const toPath = (slug: string[]) => "/" + slug.map(decodeURIComponent).join("/");
 
-/** Pre-render every known page (doctor profile and services). */
+/** Pre-render every known page (doctor profile, services and gallery). */
 export function generateStaticParams() {
   return allRoutePaths().map((path) => ({ slug: path.slice(1).split("/") }));
 }

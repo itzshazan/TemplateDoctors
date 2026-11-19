@@ -70,6 +70,7 @@ export const navLinks = [
   { id: "home", label: "Home" },
   { id: "about", label: "About" },
   { id: "services", label: "Services" },
+  { id: "gallery", label: "Gallery" },
   { id: "contact", label: "Contact" },
 ];
 
@@ -257,4 +258,14 @@ export const tips = [
       "Tests like blood sugar, thyroid and lipid profile can pick up diabetes, thyroid problems or high cholesterol before symptoms appear. Ask us which check-ups suit your age and family history.",
     image: "/images/tips/blood-test.jpg",
   },
+];
+
+/** Gallery section on the home page. */
+export const gallery: { src: string; alt: string; position: string }[] = [
+  { src: "/images/clinic-exterior.jpg", alt: "Neighbourhood clinic entrance", position: "center" },
+  { src: "/images/about-clinic.jpg", alt: "Consultation room", position: "center" },
+  { src: "/images/approach.jpg", alt: "Unhurried family consultations", position: "top" },
+  { src: "/images/child-care.jpg", alt: "Child vaccinations", position: "center" },
+  { src: "/images/hero-tests.jpg", alt: "Routine tests", position: "center" },
+  { src: "/images/tips/wound-care.jpg", alt: "Minor procedures and wound care", position: "center" },
 ];

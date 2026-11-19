@@ -52,6 +52,7 @@ export const navigation: NavItem[] = [
   { label: "Home", to: "/" },
   { label: "About", to: "/dr-devender-singh-laparoscopic-surgeon-faridabad" },
   { label: "Services", to: "/service" },
+  { label: "Gallery", to: "/gallery" },
   { label: "Contact", to: "/contact-us" },
 ];
 

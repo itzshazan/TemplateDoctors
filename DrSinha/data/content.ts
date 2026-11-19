@@ -539,5 +539,6 @@ export const navLinks: { href: string; label: string; children?: { href: string;
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
   { href: "/services", label: "Services" },
+  { href: "/gallery", label: "Gallery" },
   { href: "/contact", label: "Contact" },
 ];

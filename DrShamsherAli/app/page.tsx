@@ -14,6 +14,7 @@ import {
   generalServices,
   procedures,
   tests,
+  gallery,
 } from "@/data/site";
 
 function Heading({
@@ -147,6 +148,24 @@ export default function Home() {
                   <h3>{s.title}</h3>
                   <p>{s.note}</p>
                 </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Gallery */}
+        <section id="gallery" className="section">
+          <div className="container">
+            <Heading eyebrow="Gallery" title="Care at Family Care Centre" center />
+            <div className="photo-grid">
+              {gallery.map((g) => (
+                <figure key={g.src} className="photo-item">
+                  <div className="photo-frame">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src={g.src} alt={g.alt} loading="lazy" style={{ objectPosition: g.position }} />
+                  </div>
+                  <figcaption>{g.alt}</figcaption>
+                </figure>
               ))}
             </div>
           </div>

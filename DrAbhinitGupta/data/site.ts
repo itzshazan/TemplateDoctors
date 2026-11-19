@@ -43,6 +43,7 @@ export const navLinks = [
   { id: "home", label: "Home" },
   { id: "about", label: "About" },
   { id: "services", label: "Services" },
+  { id: "gallery", label: "Gallery" },
   { id: "contact", label: "Contact" },
 ];
 
@@ -272,3 +273,13 @@ export const clinic = {
   mapUrl: "https://www.google.com/maps/search/?api=1&query=Regency+Hospital+Sarvodaya+Nagar+Kanpur",
   embed: "https://www.google.com/maps?q=Regency+Hospital+Sarvodaya+Nagar+Kanpur&output=embed",
 };
+
+/** Gallery section on the home page. */
+export const gallery: { src: string; alt: string; position: string }[] = [
+  { src: "/images/abhinit-portrait.jpg", alt: "Dr. Abhinit Gupta, DM (Cardiology), AIIMS", position: "center" },
+  { src: "/images/guide-angioplasty.jpg", alt: "Cardiac catheterisation lab", position: "center" },
+  { src: "/images/press-dainik-jagran.jpg", alt: "Dainik Jagran report on the capsule pacemaker implant", position: "top" },
+  { src: "/images/abhinit-banner.jpg", alt: "Dr. Abhinit Gupta at Regency Hospital, Kanpur", position: "right" },
+  { src: "/images/guide-heart-attack.jpg", alt: "Knowing the warning signs of a heart attack", position: "center" },
+  { src: "/images/guide-pacemaker.jpg", alt: "An active life after heart treatment", position: "center" },
+];
