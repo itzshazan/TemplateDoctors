@@ -9,7 +9,7 @@ All text lives in `data/content.ts`. All images live in `public/images/`.
 | File | What it is | Source |
 | --- | --- | --- |
 | `dr-madhu-saini-opd.jpg` | Hero: Dr. Saini at her OPD desk (1077 × 895) | Photo supplied by the doctor. Not published anywhere online, so it couldn't be checked against a source |
-| `dr-madhu-saini.jpg` | About section portrait | Ever Healthy Hospital website (About Us, the photo above "Dr. Madhu Saini"). Backdrop circle recoloured from peach to pink to match the site theme |
+| `dr-madhu-saini.jpg` | About section portrait | Photo supplied by the doctor's team (terrace portrait, 960 × 1280), replacing the earlier photo taken from the Ever Healthy Hospital website |
 | `ever-healthy-hospital.jpg` | Hospital building (gallery) | Ever Healthy Hospital website (home page). It's an architect's rendering, so the caption says "(architect's design)". Backdrop circle recoloured to pink |
 | `ever-healthy-team.jpg` | Hospital team (Why Choose + gallery) | Ever Healthy Hospital website (home / About Us). Uploaded there in June 2025, before Dr. Saini's profile was added (Feb 2026), so she may not be in it |
 | `tip-1…6-*.svg` | Health-tip cards (illustrations) | Made for this site |
