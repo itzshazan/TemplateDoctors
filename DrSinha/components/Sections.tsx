@@ -25,10 +25,10 @@ export function Hero() {
           <h1>{hero.title}</h1>
           <p>{hero.text}</p>
           <div className="btn-row">
-            <Link className="btn btn-red" href="/contact">
+            <Link className="btn btn-red" href="/#contact">
               Book Appointment
             </Link>
-            <Link className="btn btn-white" href="/services">
+            <Link className="btn btn-white" href="/#services">
               View Treatments
             </Link>
           </div>
@@ -84,7 +84,7 @@ export function AboutBlock({ full = false }: { full?: boolean }) {
             ))}
           </ul>
           {!full && (
-            <Link className="btn btn-red" href="/about">
+            <Link className="btn btn-red" href="/#about">
               Know More <Icon name="arrow" size={18} />
             </Link>
           )}
@@ -231,7 +231,7 @@ export function CtaBand() {
         </div>
         <div className="btn-row">
           <PrimaryCta />
-          <Link className="btn btn-white" href="/contact">
+          <Link className="btn btn-white" href="/#contact">
             Contact Details
           </Link>
         </div>
@@ -259,7 +259,7 @@ export function Footer() {
           <ul>
             {services.slice(0, 5).map((s) => (
               <li key={s.slug}>
-                <Link href="/services">{s.title}</Link>
+                <Link href="/#services">{s.title}</Link>
               </li>
             ))}
           </ul>
@@ -268,10 +268,10 @@ export function Footer() {
           <h4>Quick Links</h4>
           <ul>
             <li><Link href="/">Home</Link></li>
-            <li><Link href="/about">About</Link></li>
-            <li><Link href="/services">Services</Link></li>
-            <li><Link href="/gallery">Gallery</Link></li>
-            <li><Link href="/contact">Contact</Link></li>
+            <li><Link href="/#about">About</Link></li>
+            <li><Link href="/#services">Services</Link></li>
+            <li><Link href="/#gallery">Gallery</Link></li>
+            <li><Link href="/#contact">Contact</Link></li>
           </ul>
         </div>
         <div>

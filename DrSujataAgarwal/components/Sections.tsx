@@ -49,7 +49,7 @@ export function Hero() {
           <p>{hero.text}</p>
           <div className="btn-row">
             <PrimaryCta />
-            <Link className="btn btn-outline" href="/services">
+            <Link className="btn btn-outline" href="/#services">
               Our Services
             </Link>
           </div>
@@ -111,7 +111,7 @@ export function AboutBlock({ full = false }: { full?: boolean }) {
             ))}
           </ul>
           {!full && (
-            <Link className="btn btn-primary" href="/about">
+            <Link className="btn btn-primary" href="/#about">
               Know More <Icon name="arrow" size={18} />
             </Link>
           )}
@@ -142,7 +142,7 @@ export function ServicesGrid({ limit }: { limit?: number }) {
         </div>
         {limit && (
           <div className="center mt">
-            <Link className="btn btn-outline" href="/services">View All Services</Link>
+            <Link className="btn btn-outline" href="/#services">View All Services</Link>
           </div>
         )}
       </div>
@@ -242,7 +242,7 @@ export function CtaBand() {
         </div>
         <div className="btn-row">
           <PrimaryCta className="btn btn-white" />
-          <Link className="btn btn-ghost" href="/contact">Contact Details</Link>
+          <Link className="btn btn-ghost" href="/#contact">Contact Details</Link>
         </div>
       </div>
     </section>
@@ -276,7 +276,7 @@ export function Footer() {
           <h4>Services</h4>
           <ul>
             {services.slice(0, 6).map((s) => (
-              <li key={s.slug}><Link href="/services">{s.title}</Link></li>
+              <li key={s.slug}><Link href="/#services">{s.title}</Link></li>
             ))}
           </ul>
         </div>
@@ -284,10 +284,10 @@ export function Footer() {
           <h4>Quick Links</h4>
           <ul>
             <li><Link href="/">Home</Link></li>
-            <li><Link href="/about">About</Link></li>
-            <li><Link href="/services">Services</Link></li>
-            <li><Link href="/gallery">Gallery</Link></li>
-            <li><Link href="/contact">Contact</Link></li>
+            <li><Link href="/#about">About</Link></li>
+            <li><Link href="/#services">Services</Link></li>
+            <li><Link href="/#gallery">Gallery</Link></li>
+            <li><Link href="/#contact">Contact</Link></li>
           </ul>
         </div>
         <div>

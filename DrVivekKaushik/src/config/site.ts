@@ -310,4 +310,4 @@ export const SITE: SiteConfig = {
 };
 
 export const tel = (n: string) => "tel:" + n.replace(/[^\d+]/g, "");
-export const treatmentPath = (t: Treatment) => `/treatment/${t.id}`;
+export const treatmentPath = (_t: Treatment) => "/#services";

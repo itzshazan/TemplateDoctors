@@ -20,7 +20,7 @@ export function Header() {
               </>
             )}
           </span>
-          <Link href="/contact-us" className="tp-apoint">
+          <Link href="/#contact" className="tp-apoint">
             <span>Make An Appointment</span>
           </Link>
           {(contact.facebook || contact.twitter) && (

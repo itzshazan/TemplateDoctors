@@ -1,12 +1,12 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import PageHeader from "../components/PageHeader";
 import CtaBand from "../components/CtaBand";
 import { ArrowLeftIcon, ArrowRightIcon, CloseIcon } from "../components/Icons";
 import { galleryPage as page } from "../data/pages";
 
-export default function GalleryPage() {
+export default function GalleryPage({ embedded = false }: { embedded?: boolean }) {
   const [active, setActive] = useState<number | null>(null);
   const count = page.items.length;
 
@@ -23,8 +23,16 @@ export default function GalleryPage() {
 
   return (
     <>
-      <PageHeader title={page.title} />
+      {!embedded && <PageHeader title={page.title} />}
       <section className="gallery">
+        {embedded && (
+          <div className="container">
+            <div className="block-title block-title--center">
+              <p className="block-title__tag">Gallery</p>
+              <h2 className="block-title__title">Photo Gallery</h2>
+            </div>
+          </div>
+        )}
         <div className="container gallery__grid">
           {page.items.map((item, i) => (
             <button type="button" className="gallery__item" key={item.thumb} onClick={() => setActive(i)}>
@@ -65,7 +73,7 @@ export default function GalleryPage() {
           </button>
         </div>
       )}
-      <CtaBand />
+      {!embedded && <CtaBand />}
     </>
   );
 }

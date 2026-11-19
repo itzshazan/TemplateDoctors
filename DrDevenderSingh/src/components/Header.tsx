@@ -1,11 +1,19 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { clinic, navigation, type NavItem } from "../data/site";
 import SmartLink from "./SmartLink";
-import { ChevronDownIcon, ChevronRightIcon, ClockIcon, CloseIcon, MailIcon, MenuIcon, PhoneIcon } from "./Icons";
+import {
+  ChevronDownIcon,
+  ChevronRightIcon,
+  ClockIcon,
+  CloseIcon,
+  MailIcon,
+  MenuIcon,
+  PhoneIcon,
+} from "./Icons";
 
 function DropdownItem({ item }: { item: NavItem }) {
   const target = item.to ?? item.href;
@@ -74,10 +82,21 @@ export default function Header() {
   const [sticky, setSticky] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const pathname = usePathname();
-  const isActive = (to: string) => (to === "/" ? pathname === "/" : pathname === to || pathname.startsWith(`${to}/`));
+  const [activeId, setActiveId] = useState("home");
+  // One-page site: an item is active while its section is on screen.
+  const isActive = (to: string) => pathname === "/" && to.endsWith(`#${activeId}`);
 
   useEffect(() => {
-    const onScroll = () => setSticky(window.scrollY > 220);
+    const ids = ["home", "about", "services", "gallery", "contact"];
+    const onScroll = () => {
+      setSticky(window.scrollY > 220);
+      let current = ids[0];
+      for (const id of ids) {
+        const el = document.getElementById(id);
+        if (el && el.getBoundingClientRect().top <= 140) current = id;
+      }
+      setActiveId(current);
+    };
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
@@ -161,7 +180,7 @@ export default function Header() {
               </li>
             ))}
           </ul>
-          <Link href="/contact-us" className="thm-btn main-nav__btn">
+          <Link href="/#contact" className="thm-btn main-nav__btn">
             Book an Appointment
           </Link>
         </div>
@@ -178,7 +197,7 @@ export default function Header() {
               <CloseIcon size={24} />
             </button>
           </div>
-          <ul className="mobile-nav__list">
+          <ul className="mobile-nav__list" onClick={(e) => (e.target as HTMLElement).closest("a") && setMobileOpen(false)}>
             {navigation.map((item) => (
               <MobileItem key={item.label} item={item} />
             ))}
@@ -192,7 +211,7 @@ export default function Header() {
             <a href={clinic.phoneHref}>
               <PhoneIcon /> {clinic.phone}
             </a>
-            <Link href="/contact-us" className="thm-btn">
+            <Link href="/#contact" className="thm-btn" onClick={() => setMobileOpen(false)}>
               Book an Appointment
             </Link>
           </div>

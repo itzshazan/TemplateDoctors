@@ -1,12 +1,24 @@
-import { AboutBlock, CtaBand, Hero, Specialities } from "@/components/Sections";
+import { AboutBlock, ContactBlock, GallerySection, Hero, Specialities } from "@/components/Sections";
 
+/** One-page site: every section lives here and the menu scrolls to it. */
 export default function Home() {
   return (
     <>
-      <Hero />
-      <AboutBlock />
-      <Specialities />
-      <CtaBand />
+      <div id="home">
+        <Hero />
+      </div>
+      <div id="about">
+        <AboutBlock full />
+      </div>
+      <div id="services">
+        <Specialities />
+      </div>
+      <div id="gallery">
+        <GallerySection />
+      </div>
+      <div id="contact">
+        <ContactBlock />
+      </div>
     </>
   );
 }

@@ -3,18 +3,18 @@ import Icon from "./Icon";
 import { SITE, tel, type SocialKey, type Treatment } from "@/config/site";
 
 const QUICK_LINKS = [
-  { label: "Home", to: "/" },
-  { label: "About", to: "/about" },
-  { label: "Services", to: "/services" },
-  { label: "Gallery", to: "/gallery" },
-  { label: "Contact", to: "/contact" },
+  { label: "Home", to: "/#home" },
+  { label: "About", to: "/#about" },
+  { label: "Services", to: "/#services" },
+  { label: "Gallery", to: "/#gallery" },
+  { label: "Contact", to: "/#contact" },
 ];
 
 function TreatmentLinks({ items }: { items: Treatment[] }) {
   return (
     <ul className="footer-links">
       {items.slice(0, 6).map((t) => (
-        <li key={t.id}><Link href="/services">{t.title}</Link></li>
+        <li key={t.id}><Link href="/#services">{t.title}</Link></li>
       ))}
     </ul>
   );

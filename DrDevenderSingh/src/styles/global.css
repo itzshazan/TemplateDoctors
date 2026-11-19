@@ -2097,3 +2097,7 @@ li:hover > .dropdown {
   background: linear-gradient(90deg, rgba(6, 42, 31, 0.88) 0%, rgba(6, 42, 31, 0.6) 45%, rgba(6, 42, 31, 0) 78%);
 }
 .banner__slide .container { position: relative; z-index: 1; }
+
+/* One-page navigation */
+html { scroll-behavior: smooth; }
+#home, #about, #services, #gallery, #contact { scroll-margin-top: 90px; }

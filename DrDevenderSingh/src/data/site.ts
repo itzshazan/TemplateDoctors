@@ -49,11 +49,11 @@ export interface NavItem {
 const links = (pairs: [string, string][]): NavItem[] => pairs.map(([label, slug]) => ({ label, to: `/${slug}` }));
 
 export const navigation: NavItem[] = [
-  { label: "Home", to: "/" },
-  { label: "About", to: "/dr-devender-singh-laparoscopic-surgeon-faridabad" },
-  { label: "Services", to: "/service" },
-  { label: "Gallery", to: "/gallery" },
-  { label: "Contact", to: "/contact-us" },
+  { label: "Home", to: "/#home" },
+  { label: "About", to: "/#about" },
+  { label: "Services", to: "/#services" },
+  { label: "Gallery", to: "/#gallery" },
+  { label: "Contact", to: "/#contact" },
 ];
 
 export const routeTitles: Record<string, string> = (() => {
@@ -83,7 +83,7 @@ export const hero = {
 export const featureStrip = {
   image: img("feature.jpg"),
   items: [
-    { icon: img("icon-calendar.svg"), title: "Book a consultation", lines: ["Call, WhatsApp or send a request"], link: "/contact-us" },
+    { icon: img("icon-calendar.svg"), title: "Book a consultation", lines: ["Call, WhatsApp or send a request"], link: "/#contact" },
     { icon: img("icon-phone.svg"), title: "Call Us Today", lines: [clinic.phone], link: clinic.phoneHref },
     { icon: img("icon-clock.svg"), title: "OPD hours", lines: clinic.hours },
   ],

@@ -1,4 +1,3 @@
-import React from "react";
 import Link from "next/link";
 import { clinic, img } from "../data/site";
 
@@ -12,7 +11,7 @@ export default function CtaBand({ label = "Have Any Problem" }: { label?: string
           <br />
           Call us at <a href={clinic.phoneHref}>{clinic.phone}</a> or make an <span>appointment</span>
         </h4>
-        <Link href="/contact-us" className="thm-btn">
+        <Link href="/#contact" className="thm-btn">
           Book an Appointment
         </Link>
       </div>

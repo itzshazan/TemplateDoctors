@@ -1,4 +1,3 @@
-import React from "react";
 import PageHeader from "../components/PageHeader";
 import CtaBand from "../components/CtaBand";
 import { CheckIcon, MailIcon, MapPinIcon, PhoneIcon } from "../components/Icons";
@@ -30,10 +29,11 @@ function HistoryList({ tag, title, items }: { tag: string; title: string; items:
   );
 }
 
-export default function DoctorProfilePage() {
+/** `embedded` renders the profile as a home-page section (no banner or closing call-to-action). */
+export default function DoctorProfilePage({ embedded = false }: { embedded?: boolean }) {
   return (
     <>
-      <PageHeader title={d.bannerTitle} crumb={d.title} />
+      {!embedded && <PageHeader title={d.bannerTitle} crumb={d.title} />}
 
       <section className="doctor-two">
         <div className="container">
@@ -105,6 +105,8 @@ export default function DoctorProfilePage() {
       </section>
       )}
 
+      {!embedded && (
+        <>
       <section className="question-strip">
         <div className="container question-strip__inner">
           <h2>Do You Have Any Question</h2>
@@ -125,6 +127,8 @@ export default function DoctorProfilePage() {
       </section>
 
       <CtaBand label="Need to See a Doctor?" />
+        </>
+      )}
     </>
   );
 }

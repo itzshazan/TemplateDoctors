@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import Link from "next/link";
 import { hero, heroSlides } from "../../data/site";
 import { ArrowLeftIcon, ArrowRightIcon } from "../Icons";
@@ -32,7 +32,7 @@ export default function HeroCarousel() {
               <span className="banner__tag">{hero.tag}</span>
               <h3 className="banner__title">{hero.title}</h3>
               <p className="banner__text">{hero.text}</p>
-              <Link href="/contact-us" className="thm-btn" tabIndex={i === active ? 0 : -1}>
+              <Link href="/#contact" className="thm-btn" tabIndex={i === active ? 0 : -1}>
                 Book an appointment
               </Link>
             </div>

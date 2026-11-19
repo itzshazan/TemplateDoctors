@@ -1,4 +1,3 @@
-import React from "react";
 import Link from "next/link";
 import { clinic, footerAbout, services } from "../data/site";
 import { FacebookIcon, InstagramIcon, YoutubeIcon } from "./Icons";
@@ -67,7 +66,7 @@ export default function Footer() {
             <ul className="footer-list">
               {services.map((s) => (
                 <li key={s.to}>
-                  <Link href="/service">{s.title}</Link>
+                  <Link href="/#services">{s.title}</Link>
                 </li>
               ))}
             </ul>
@@ -79,7 +78,7 @@ export default function Footer() {
         <div className="container bottom-footer__inner">
           <p>&copy; Copyright {clinic.name} {new Date().getFullYear()}. All right reserved.</p>
           <p>
-            <Link href="/contact-us">Book an Appointment</Link>
+            <Link href="/#contact">Book an Appointment</Link>
           </p>
         </div>
       </div>

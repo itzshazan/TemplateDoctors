@@ -1,4 +1,3 @@
-import React from "react";
 import Link from "next/link";
 import { welcome } from "../../data/site";
 import { CheckIcon } from "../Icons";
@@ -34,7 +33,7 @@ export default function Welcome() {
                   </li>
                 ))}
               </ul>
-              <Link href="/service" className="thm-btn">
+              <Link href="/#services" className="thm-btn">
                 Know More
               </Link>
             </Reveal>

@@ -13,12 +13,14 @@ interface NavItem {
 }
 
 const NAV: NavItem[] = [
-  { label: "Home", href: "/" },
-  { label: "About", href: "/about" },
-  { label: "Services", href: "/services" },
-  { label: "Gallery", href: "/gallery" },
-  { label: "Contact", href: "/contact" },
+  { label: "Home", href: "/#home" },
+  { label: "About", href: "/#about" },
+  { label: "Services", href: "/#services" },
+  { label: "Gallery", href: "/#gallery" },
+  { label: "Contact", href: "/#contact" },
 ];
+
+const SECTION_IDS = NAV.map((n) => n.href.split("#")[1]);
 
 const isMobile = () => window.matchMedia("(max-width: 1024px)").matches;
 
@@ -28,6 +30,7 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [openSub, setOpenSub] = useState<string | null>(null);
   const [scrolled, setScrolled] = useState(false);
+  const [activeId, setActiveId] = useState(SECTION_IDS[0]);
 
   // Close the mobile menu after navigating
   useEffect(() => {
@@ -36,15 +39,23 @@ export default function Header() {
   }, [pathname]);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 10);
+    const onScroll = () => {
+      setScrolled(window.scrollY > 10);
+      // Highlight the menu item for the section currently under the header
+      let current = SECTION_IDS[0];
+      for (const id of SECTION_IDS) {
+        const el = document.getElementById(id);
+        if (el && el.getBoundingClientRect().top <= 140) current = id;
+      }
+      setActiveId(current);
+    };
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // A treatment page counts as "inside" Services or Conditions
-  const isActive = (item: NavItem) =>
-    pathname === item.href || (item.children?.some((c) => pathname === treatmentPath(c)) ?? false);
+  // One-page site: an item is active while its section is on screen
+  const isActive = (item: NavItem) => pathname === "/" && item.href.endsWith(`#${activeId}`);
 
   // On mobile the first tap on a parent item opens its submenu instead of navigating
   const onParentClick = (e: MouseEvent, item: NavItem) => {
@@ -72,7 +83,7 @@ export default function Header() {
       <header className={`site-header${scrolled ? " is-scrolled" : ""}${menuOpen ? " nav-open" : ""}`}>
         <div className="header-main">
           <div className="container">
-            <Link className="logo" href="/" aria-label={`${SITE.name} — home`}>
+            <Link className="logo" href="/#home" aria-label={`${SITE.name} — home`}>
               <img src="/img/logo.svg" alt={SITE.name} width={260} height={60} />
             </Link>
 
@@ -88,8 +99,8 @@ export default function Header() {
                     <li key={item.href} className={classes || undefined}>
                       <Link
                         href={item.href}
-                        aria-current={pathname === item.href ? "page" : undefined}
-                        onClick={(e) => onParentClick(e, item)}
+                        aria-current={isActive(item) ? "true" : undefined}
+                        onClick={(e) => { onParentClick(e, item); if (!item.children) setMenuOpen(false); }}
                       >
                         {item.label}
                         {item.children && (

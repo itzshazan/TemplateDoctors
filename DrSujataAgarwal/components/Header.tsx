@@ -20,7 +20,23 @@ export default function Header() {
 
   useEffect(() => setOpen(false), [pathname]);
 
-  const isActive = (href: string) => (href === "/" ? pathname === "/" : pathname.startsWith(href));
+  const [activeId, setActiveId] = useState("home");
+  // One-page site: highlight the menu item for the section currently on screen.
+  useEffect(() => {
+    const ids = ["home", "about", "services", "gallery", "contact"];
+    const onScroll = () => {
+      let current = ids[0];
+      for (const id of ids) {
+        const el = document.getElementById(id);
+        if (el && el.getBoundingClientRect().top <= 140) current = id;
+      }
+      setActiveId(current);
+    };
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+  const isActive = (href: string) => pathname === "/" && href.endsWith(`#${activeId}`);
 
   return (
     <>
@@ -55,7 +71,7 @@ export default function Header() {
             <ul>
               {navLinks.map((l) => (
                 <li key={l.href}>
-                  <Link href={l.href} className={isActive(l.href) ? "active" : ""}>
+                  <Link href={l.href} className={isActive(l.href) ? "active" : ""} onClick={() => setOpen(false)}>
                     {l.label}
                   </Link>
                 </li>

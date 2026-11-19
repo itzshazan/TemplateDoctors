@@ -24,7 +24,23 @@ export default function Header() {
     setSub(null);
   }, [pathname]);
 
-  const isActive = (href: string) => (href === "/" ? pathname === "/" : pathname.startsWith(href));
+  const [activeId, setActiveId] = useState("home");
+  // One-page site: highlight the menu item for the section currently on screen.
+  useEffect(() => {
+    const ids = ["home", "about", "services", "gallery", "contact"];
+    const onScroll = () => {
+      let current = ids[0];
+      for (const id of ids) {
+        const el = document.getElementById(id);
+        if (el && el.getBoundingClientRect().top <= 140) current = id;
+      }
+      setActiveId(current);
+    };
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+  const isActive = (href: string) => pathname === "/" && href.endsWith(`#${activeId}`);
 
   return (
     <>
@@ -70,7 +86,7 @@ export default function Header() {
             <ul>
               {navLinks.map((l) => (
                 <li key={l.href} className={l.children ? "has-sub" : ""}>
-                  <Link href={l.href} className={isActive(l.href) ? "active" : ""}>
+                  <Link href={l.href} className={isActive(l.href) ? "active" : ""} onClick={() => setOpen(false)}>
                     {l.label}
                   </Link>
                   {l.children && (
@@ -103,7 +119,7 @@ export default function Header() {
                 <Icon name="phone" size={18} /> Call Now
               </a>
             ) : (
-              <Link className="btn btn-red" href="/contact">
+              <Link className="btn btn-red" href="/#contact">
                 <Icon name="calendar" size={18} /> Book Visit
               </Link>
             )}

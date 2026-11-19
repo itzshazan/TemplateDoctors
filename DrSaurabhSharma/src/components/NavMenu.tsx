@@ -10,6 +10,7 @@ export function NavMenu() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const [subOpen, setSubOpen] = useState(false);
+  const [activeId, setActiveId] = useState("home");
 
   // Close the mobile menu after navigating.
   useEffect(() => {
@@ -17,8 +18,28 @@ export function NavMenu() {
     setSubOpen(false);
   }, [pathname]);
 
+  // One-page site: highlight the menu item for the section currently on screen.
+  useEffect(() => {
+    const ids = ["home", "about", "services", "gallery", "contact"];
+    const onScroll = () => {
+      let current = ids[0];
+      for (const id of ids) {
+        const el = document.getElementById(id);
+        if (el && el.getBoundingClientRect().top <= 140) current = id;
+      }
+      setActiveId(current);
+    };
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   const isActive = (href: string) =>
-    href === "/" ? pathname === "/" : pathname === href || pathname.startsWith(`${href}/`);
+    pathname === "/" && (href === "/" ? activeId === "home" : href.endsWith(`#${activeId}`));
+  const close = () => {
+    setOpen(false);
+    setSubOpen(false);
+  };
 
   return (
     <nav className="navigation-area" aria-label="Main">
@@ -52,14 +73,14 @@ export function NavMenu() {
               <ul className="lavel">
                 {services.map((s) => (
                   <li key={s.id}>
-                    <Link href={`/services#${s.id}`}>{s.menuLabel}</Link>
+                    <Link href={`/#${s.id}`} onClick={close}>{s.menuLabel}</Link>
                   </li>
                 ))}
               </ul>
             </li>
           ) : (
             <li key={item.href} className={`${item.href === "/" ? "home-nav" : ""}${isActive(item.href) ? " act" : ""}`.trim() || undefined}>
-              <Link href={item.href} aria-label={item.href === "/" ? item.label : undefined}>
+              <Link href={item.href} aria-label={item.href === "/" ? item.label : undefined} onClick={close}>
                 {item.href === "/" ? (
                   <>
                     <Icon name="home" size={24} className="home-icon" />

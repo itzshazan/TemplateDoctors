@@ -324,3 +324,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   .fc-2 { display: none; }
   .fc-1 { bottom: 20px; }
 }
+
+/* One-page navigation */
+html { scroll-behavior: smooth; }
+#home, #about, #services, #gallery, #contact { scroll-margin-top: 84px; }

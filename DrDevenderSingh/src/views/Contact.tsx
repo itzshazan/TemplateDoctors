@@ -24,7 +24,7 @@ const widgetIcon = (title: string) => {
   return <MapPinIcon size={26} />;
 };
 
-export default function Contact() {
+export default function Contact({ embedded = false }: { embedded?: boolean }) {
   const [form, setForm] = useState<FormState>(empty);
   const [sent, setSent] = useState(false);
 
@@ -47,7 +47,7 @@ export default function Contact() {
 
   return (
     <>
-      <PageHeader title="Contact Us" />
+      {!embedded && <PageHeader title="Contact Us" />}
       <section className="contact">
         <div className="container">
           <div className="row">
@@ -94,7 +94,7 @@ export default function Contact() {
           </div>
         </div>
       </section>
-      <CtaBand />
+      {!embedded && <CtaBand />}
     </>
   );
 }

@@ -1,4 +1,3 @@
-import React from "react";
 import PageHeader from "../components/PageHeader";
 import CtaBand from "../components/CtaBand";
 import SmartLink from "../components/SmartLink";
@@ -7,10 +6,10 @@ import type { GridPage as GridPageData } from "../data/pages";
 import { clinic } from "../data/site";
 
 /** Card grid used by /service, the blog hub pages (e.g. /pcos) and /media. */
-export default function GridPage({ page }: { page: GridPageData }) {
+export default function GridPage({ page, embedded = false }: { page: GridPageData; embedded?: boolean }) {
   return (
     <>
-      <PageHeader title={page.title} />
+      {!embedded && <PageHeader title={page.title} />}
       <section className="service-grid">
         <div className="container">
           <div className="block-title block-title--center">
@@ -47,7 +46,7 @@ export default function GridPage({ page }: { page: GridPageData }) {
           </div>
         </div>
       </section>
-      <CtaBand />
+      {!embedded && <CtaBand />}
     </>
   );
 }

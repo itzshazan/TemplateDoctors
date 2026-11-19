@@ -525,3 +525,7 @@ input[type="submit"]:disabled { opacity: .7; cursor: wait; }
 .visit-card .btn1 { margin-top: 6px; }
 /* The curved services backdrop is drawn wider than the screen; don't let it cause sideways scrolling. */
 html, body { overflow-x: clip; }
+
+/* One-page navigation */
+html { scroll-behavior: smooth; }
+main [id], [id="home"], [id="about"], [id="services"], [id="gallery"], [id="contact"], .service-block { scroll-margin-top: 20px; }

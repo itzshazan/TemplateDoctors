@@ -310,3 +310,7 @@ ul { margin: 0; padding: 0; list-style: none; }
   .tab-list { grid-template-columns: 1fr; }
   .why-point { flex-direction: column; gap: 10px; }
 }
+
+/* One-page navigation */
+html { scroll-behavior: smooth; }
+#home, #about, #services, #gallery, #contact { scroll-margin-top: 84px; }
