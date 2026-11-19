@@ -201,6 +201,11 @@ export default function Home() {
           </nav>
           <p className="footer-copy">© {new Date().getFullYear()} {site.name}. Information on this website is general and not a substitute for an in-person assessment.</p>
         </div>
+        <div className="powered-by">
+          <a href="https://doctorrating.in/" target="_blank" rel="noopener">
+            Powered by <strong>DoctorRating</strong>
+          </a>
+        </div>
       </footer>
 
       <a className="wa-float" href={`https://wa.me/${site.whatsapp}`} target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">

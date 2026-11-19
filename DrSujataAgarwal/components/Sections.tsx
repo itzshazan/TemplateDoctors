@@ -303,6 +303,11 @@ export function Footer() {
         <span>© {new Date().getFullYear()} {site.clinic}. All rights reserved.</span>
         <span>Health information on this site is for awareness only and is not a substitute for a consultation.</span>
       </div>
+      <div className="powered-by">
+        <a href="https://doctorrating.in/" target="_blank" rel="noopener">
+          Powered by <strong>DoctorRating</strong>
+        </a>
+      </div>
     </footer>
   );
 }

@@ -132,6 +132,11 @@ export function Footer() {
         The information on this website is for general awareness only and is not a substitute for a consultation with
         a qualified doctor.
       </div>
+      <div className="powered-by">
+        <a href="https://doctorrating.in/" target="_blank" rel="noopener">
+          Powered by <strong>DoctorRating</strong>
+        </a>
+      </div>
     </footer>
   );
 }

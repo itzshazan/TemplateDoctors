@@ -70,6 +70,11 @@ export default function Footer() {
           {SITE.hours && <span>{SITE.hours}</span>}
         </div>
       </div>
+      <div className="powered-by">
+        <a href="https://doctorrating.in/" target="_blank" rel="noopener">
+          Powered by <strong>DoctorRating</strong>
+        </a>
+      </div>
     </footer>
   );
 }

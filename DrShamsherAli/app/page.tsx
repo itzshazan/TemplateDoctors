@@ -312,6 +312,11 @@ export default function Home() {
             © {new Date().getFullYear()} {site.name}, {site.area}. All Rights Reserved.
           </div>
         </div>
+        <div className="powered-by">
+          <a href="https://doctorrating.in/" target="_blank" rel="noopener">
+            Powered by <strong>DoctorRating</strong>
+          </a>
+        </div>
       </footer>
 
       <a href={site.phoneHref} className="float-call" aria-label={`Call ${site.name}`}>

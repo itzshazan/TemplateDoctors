@@ -529,3 +529,10 @@ html, body { overflow-x: clip; }
 /* One-page navigation */
 html { scroll-behavior: smooth; }
 main [id], [id="home"], [id="about"], [id="services"], [id="gallery"], [id="contact"], .service-block { scroll-margin-top: 20px; }
+
+/* ---------- Powered by DoctorRating ---------- */
+.powered-by { display: block; text-align: center; padding: 12px 16px 14px; font-size: 13px; line-height: 1.4; letter-spacing: .02em; border-top: 1px solid rgba(127, 127, 127, .22); }
+.powered-by a { color: inherit; opacity: .85; text-decoration: none; transition: opacity .2s; }
+.powered-by a:hover { opacity: 1; }
+.powered-by a strong { font-weight: 700; text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+.footer .powered-by { color: #fff; border-top-color: rgba(255, 255, 255, .18); }

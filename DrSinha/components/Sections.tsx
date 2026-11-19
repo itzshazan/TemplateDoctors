@@ -296,6 +296,11 @@ export function Footer() {
         <span>Copyright {new Date().getFullYear()} © {site.clinic}. All Rights Reserved</span>
         <span>Information on this site is for general awareness and is not a substitute for a consultation.</span>
       </div>
+      <div className="powered-by">
+        <a href="https://doctorrating.in/" target="_blank" rel="noopener">
+          Powered by <strong>DoctorRating</strong>
+        </a>
+      </div>
     </footer>
   );
 }

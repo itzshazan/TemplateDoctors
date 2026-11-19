@@ -8,6 +8,11 @@ export function Footer() {
           Copyright © {new Date().getFullYear()} {doctor.name} All Rights Reserved
         </p>
       </div>
+      <div className="powered-by">
+        <a href="https://doctorrating.in/" target="_blank" rel="noopener">
+          Powered by <strong>DoctorRating</strong>
+        </a>
+      </div>
     </footer>
   );
 }
