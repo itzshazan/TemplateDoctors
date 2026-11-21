@@ -26,7 +26,7 @@ export const site = {
 export const images = {
   portrait: `${IMG}/dr-ram-pratap.jpg`,
   award: `${IMG}/award-physio-bharat.jpg`,
-  about: `${IMG}/g-mfr.jpg`,
+  about: `${IMG}/fortis-fisiocon-2026.jpg`,
 };
 
 export const navLinks = [
@@ -83,13 +83,15 @@ export const marquee = [
   "MFR", "IASTM", "Orthopaedic Rehab", "Paralysis Rehab",
 ];
 
-// award-physio-bharat.jpg and dr-ram-pratap.jpg are real photos supplied for this site.
-// The others are AI-generated to show the therapies in general; they do not show Dr. Ram Pratap.
-export const gallery = [
-  { src: `${IMG}/award-physio-bharat.jpg`, alt: "Receiving the Physio Bharat 7 certificate", wide: true },
+// All photos here are real photos supplied by Dr. Ram Pratap, except the two therapy images
+// (g-dry-cupping.jpg, g-iastm.jpg), which are AI-generated to show those therapies in general
+// (no faces; they do not show Dr. Ram Pratap).
+// `pos` is the CSS object-position used when a photo is cropped into its tile.
+export const gallery: { src: string; alt: string; wide?: boolean; pos?: string }[] = [
+  { src: `${IMG}/physio-event-group.jpg`, alt: "With fellow physiotherapists at an event", wide: true, pos: "center 40%" },
+  { src: `${IMG}/fortis-fisiocon-2026.jpg`, alt: "Receiving a certificate at Fortis FISIOCON 2026", pos: "center 50%" },
   { src: `${IMG}/g-dry-cupping.jpg`, alt: "Dry cupping therapy" },
+  { src: `${IMG}/iap-certificate.jpg`, alt: "Certificate of appreciation, Indian Association of Physiotherapists", pos: "center 40%" },
+  { src: `${IMG}/award-physio-bharat.jpg`, alt: "Receiving the Physio Bharat 7 certificate", pos: "center 45%" },
   { src: `${IMG}/g-iastm.jpg`, alt: "IASTM tool therapy" },
-  { src: `${IMG}/g-paralysis-rehab.jpg`, alt: "Walking practice in paralysis rehab" },
-  { src: `${IMG}/g-cupping-set.jpg`, alt: "Glass and bamboo cups" },
-  { src: `${IMG}/g-knee-rehab.jpg`, alt: "Knee strengthening exercises" },
 ];

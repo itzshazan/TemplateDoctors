@@ -15,16 +15,19 @@ Dr. Ram Pratap, so its address is **not** used.
 
 | File | Used for | Source |
 | --- | --- | --- |
-| `dr-ram-pratap.jpg` | Hero portrait | **Real photo** supplied by you |
-| `award-physio-bharat.jpg` | About, gallery | **Real photo** supplied by you: Physio Bharat 7 certificate (Artemis Hospitals banner) |
-| `g-mfr.jpg`, `g-dry-cupping.jpg`, `g-iastm.jpg`, `g-paralysis-rehab.jpg`, `g-cupping-set.jpg`, `g-knee-rehab.jpg` | About, gallery | AI-generated (Figma AI) to show the therapies in general. No therapist faces; they do not show Dr. Ram Pratap |
+| `dr-ram-pratap.jpg` | Hero portrait | **Real photo** supplied by you (at the H Heals Physiotherapy Clinic desk) |
+| `fortis-fisiocon-2026.jpg` | About, gallery | **Real photo** supplied by you: certificate at Fortis FISIOCON 2026 (the phone's date stamp was cropped off) |
+| `award-physio-bharat.jpg` | About, gallery | **Real photo** supplied by you: Physio Bharat 7 certificate |
+| `physio-event-group.jpg` | Gallery (large tile) | **Real photo** supplied by you: group photo at a physiotherapists' event |
+| `iap-certificate.jpg` | Gallery | **Real photo** supplied by you: certificate of appreciation, Indian Association of Physiotherapists |
+| `g-dry-cupping.jpg`, `g-iastm.jpg` | Gallery | AI-generated (Figma AI) to show these therapies in general. No faces; they do not show Dr. Ram Pratap |
 
-Not used: the clinic photo with the knee model. The sign in it reads "H-Heals Physiotherapy, OT & Cancer Rehab
-Centre – Dr. Hitesh Gupta", and the clinician at the desk looks different from Dr. Ram Pratap's portrait.
+Removed: the other four AI therapy images, now replaced by real photos. The photo of the clinic desk with a knee
+model (Dr. Hitesh Gupta's sign) is still not used.
 
 ## Content checklist (confirm before going live)
 
-- [ ] **Clinic address** (not supplied). The contact section says "Please call for the clinic address" until added.
+- [ ] **Clinic address** (not supplied). The new portrait shows the "H Heals Physiotherapy Clinic" sign. The H-Heals address on hheals.co.in is Ground Floor, Gate No. 4, B-1032, Opp. Gandhi Park, near NHPC Chowk, Greenfield Colony Block B, Sector 43, Faridabad: confirm it before using it. The contact section says "Please call for the clinic address" until added.
 - [ ] Which **days** the morning (10–1) and evening (5:30–8) timings apply to.
 - [ ] Is **+91 99277 35694** on **WhatsApp**? The booking form and floating button use it.
 - [ ] **Second service list** was left blank. The site shows Orthopaedic Physiotherapy and Paralysis Rehabilitation

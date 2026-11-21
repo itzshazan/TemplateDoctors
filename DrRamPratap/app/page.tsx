@@ -81,7 +81,7 @@ export default function Home() {
         <section id="about" className="section about">
           <div className="container about-grid">
             <div className="about-media reveal">
-              <img className="about-main" src={images.about} alt="Myofascial release therapy" loading="lazy" />
+              <img className="about-main" src={images.about} alt={`${site.name} receiving a certificate at Fortis FISIOCON 2026`} loading="lazy" />
               <figure className="about-award">
                 <img src={images.award} alt={`${site.name} receiving the Physio Bharat 7 certificate`} loading="lazy" />
                 <figcaption><Icon name="award" size={16} /> Physio Bharat 7 certificate</figcaption>
