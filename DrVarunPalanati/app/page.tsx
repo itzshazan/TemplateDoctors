@@ -21,9 +21,9 @@ export default function Home() {
             <div className="hero-copy">
               <span className="eyebrow eyebrow-gold">{site.title} · {site.city}</span>
               <h1>
-                Precision surgery.
+                <span className="line">Precision surgery.</span>
                 <br />
-                <em>Compassionate</em> care.
+                <span className="line"><em>Compassionate</em> care.</span>
               </h1>
               <p className="lead">
                 {site.name} brings advanced laparoscopic and gastrointestinal surgery to Guntur, from gall bladder and
