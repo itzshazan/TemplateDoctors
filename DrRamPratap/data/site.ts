@@ -14,8 +14,10 @@ export const site = {
   // CONFIRM: is this number on WhatsApp? The appointment form sends requests there.
   whatsapp: "919927735694",
   email: "rampratapprajapati99@gmail.com",
-  // CONFIRM: clinic address (not supplied). Shown as "call for the clinic address" until filled in.
-  address: "",
+  // From his clinic poster (Nov 2026).
+  clinic: "H Heals Physiotherapy Clinic",
+  address: "Greenfield Colony, Sector 42, Faridabad, Haryana",
+  directions: "https://www.google.com/maps/search/?api=1&query=H+Heals+Physiotherapy+Clinic+Greenfield+Colony+Faridabad",
   // CONFIRM: which days these timings apply to.
   hours: [
     { label: "Morning", time: "10:00 AM – 1:00 PM" },
@@ -54,7 +56,7 @@ export const hospitals = [
 
 export type IconName =
   | "cup" | "fire" | "bamboo" | "drop" | "weight" | "wave" | "hand" | "tool"
-  | "bone" | "walk" | "spine" | "knee";
+  | "bone" | "walk" | "spine" | "knee" | "run" | "brain";
 
 /** "Advanced Therapy" list, as supplied. Descriptions are general explanations of each technique. */
 export const advancedTherapies: { title: string; text: string; icon: IconName; featured?: boolean }[] = [
@@ -68,24 +70,24 @@ export const advancedTherapies: { title: string; text: string; icon: IconName; f
   { title: "IASTM Tool Therapy", text: "Instrument-assisted soft-tissue mobilisation with steel tools to treat adhesions and scar tissue.", icon: "tool" },
 ];
 
-// CONFIRM: the core physiotherapy services (the second service list was left blank).
-// Orthopaedics and paralysis care come from the supplied details; the other two are typical for an MPT (Ortho).
+// The six services on his H Heals clinic poster. Descriptions are short general explanations.
 export const rehabServices: { title: string; text: string; icon: IconName }[] = [
-  { title: "Orthopaedic Physiotherapy", text: "Back, neck, shoulder and knee pain, stiffness and joint problems, assessed and treated with a clear plan.", icon: "bone" },
-  { title: "Paralysis Rehabilitation", text: "Step-by-step rehab to rebuild strength, balance and walking after paralysis.", icon: "walk" },
-  { title: "Post-Surgery & Fracture Rehab", text: "Getting movement and strength back after fractures and orthopaedic surgery.", icon: "knee" },
-  { title: "Spine & Posture Care", text: "Exercises and manual therapy for back pain, slipped disc and posture problems.", icon: "spine" },
+  { title: "Pain Relief Therapy", text: "Hands-on treatment, exercise and modalities to ease acute and long-standing pain.", icon: "hand" },
+  { title: "Post-Surgery Rehabilitation", text: "Getting movement, strength and confidence back after fractures and orthopaedic surgery.", icon: "knee" },
+  { title: "Neurological Rehabilitation", text: "Step-by-step rehab after stroke and paralysis to rebuild strength, balance and walking.", icon: "brain" },
+  { title: "Back & Neck Pain Treatment", text: "Assessment and care for back pain, neck pain, slipped disc and posture problems.", icon: "spine" },
+  { title: "Sports Injury", text: "Treatment and graded return to sport after sprains, strains and ligament injuries.", icon: "run" },
+  { title: "Manual Therapy", text: "Skilled hands-on mobilisation and soft-tissue work to free stiff joints and muscles.", icon: "bone" },
 ];
 
 /** Scrolling strip under the hero. */
 export const marquee = [
   "Hijama", "Dry Cupping", "Fire Cupping", "Bamboo Cupping", "Weight Cupping", "Dynamic Therapy",
-  "MFR", "IASTM", "Orthopaedic Rehab", "Paralysis Rehab",
+  "MFR", "IASTM", "Manual Therapy", "Neuro Rehab", "Sports Injury", "Post-Surgery Rehab",
 ];
 
-// All photos here are real photos supplied by Dr. Ram Pratap, except the two therapy images
-// (g-dry-cupping.jpg, g-iastm.jpg), which are AI-generated to show those therapies in general
-// (no faces; they do not show Dr. Ram Pratap).
+// All photos here are real photos supplied by Dr. Ram Pratap (fortis-talk.jpg is cropped from his clinic poster),
+// except g-dry-cupping.jpg, which is AI-generated to show the therapy in general (no faces).
 // `pos` is the CSS object-position used when a photo is cropped into its tile.
 export const gallery: { src: string; alt: string; wide?: boolean; pos?: string }[] = [
   { src: `${IMG}/physio-event-group.jpg`, alt: "With fellow physiotherapists at an event", wide: true, pos: "center 40%" },
@@ -93,5 +95,5 @@ export const gallery: { src: string; alt: string; wide?: boolean; pos?: string }
   { src: `${IMG}/g-dry-cupping.jpg`, alt: "Dry cupping therapy" },
   { src: `${IMG}/iap-certificate.jpg`, alt: "Certificate of appreciation, Indian Association of Physiotherapists", pos: "center 40%" },
   { src: `${IMG}/award-physio-bharat.jpg`, alt: "Receiving the Physio Bharat 7 certificate", pos: "center 45%" },
-  { src: `${IMG}/g-iastm.jpg`, alt: "IASTM tool therapy" },
+  { src: `${IMG}/fortis-talk.jpg`, alt: "Speaking at Fortis Memorial Research Institute", pos: "center 30%" },
 ];

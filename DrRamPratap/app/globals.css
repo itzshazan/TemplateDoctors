@@ -138,7 +138,7 @@ main section[id] { scroll-margin-top: 96px; }
 .bento-card p { margin: 0; color: var(--muted); font-size: .95rem; }
 .rehab { margin-top: 34px; background: var(--ink); color: var(--cream); border-radius: 30px; padding: clamp(28px, 4vw, 48px); }
 .rehab-head h3 { font-size: clamp(1.6rem, 3vw, 2.2rem); max-width: 560px; margin-bottom: 26px; }
-.rehab-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.rehab-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
 .rehab-card { background: var(--ink-2); border-radius: 18px; padding: 22px; border: 1px solid rgba(255, 255, 255, .06); }
 .rehab-card svg { color: #F2B79E; margin-bottom: 14px; }
 .rehab-card h4 { font-size: 1.12rem; margin-bottom: 6px; }
@@ -166,6 +166,8 @@ main section[id] { scroll-margin-top: 96px; }
 .contact-list li > span { flex: none; width: 48px; height: 48px; border-radius: 14px; background: var(--ink-2); color: #F2B79E; display: grid; place-items: center; }
 .contact-list small { display: block; color: rgba(251, 246, 239, .6); font-size: .8rem; letter-spacing: .06em; text-transform: uppercase; }
 .contact-list a, .contact-list b { display: block; font-weight: 600; font-size: 1.02rem; word-break: break-word; }
+.contact-list div > span { display: block; color: rgba(251, 246, 239, .75); }
+.contact-list .dir { font-size: .9rem; color: #F2B79E; margin-top: 4px; }
 .contact-list a:hover { color: #F2B79E; }
 .form { background: var(--cream); color: var(--ink); border-radius: 28px; padding: clamp(24px, 3.5vw, 38px); display: grid; gap: 14px; }
 .form h3 { font-size: 1.7rem; margin: 0 0 4px; }

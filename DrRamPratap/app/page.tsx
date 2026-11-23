@@ -100,6 +100,10 @@ export default function Home() {
                 techniques such as hijama, cupping, myofascial release and IASTM, so each patient gets the treatment
                 that suits their pain and goals.
               </p>
+              <p>
+                Today Dr. Ram Pratap consults at {site.clinic} in Greenfield Colony, Faridabad, and has been a speaker at
+                Fortis Memorial Research Institute, Gurugram.
+              </p>
               <div className="qual-chips">
                 <span>BPT</span><span>MPT (Ortho)</span><span>{site.speciality}</span><span>15+ Awards</span>
               </div>
@@ -179,7 +183,12 @@ export default function Home() {
                 </li>
                 <li>
                   <span><Icon name="pin" /></span>
-                  <div><small>Clinic</small><b>{site.address || "Please call for the clinic address"}</b></div>
+                  <div>
+                    <small>Clinic</small>
+                    <b>{site.clinic}</b>
+                    <span>{site.address}</span>
+                    <a className="dir" href={site.directions} target="_blank" rel="noopener noreferrer">Get directions ↗</a>
+                  </div>
                 </li>
               </ul>
             </div>
