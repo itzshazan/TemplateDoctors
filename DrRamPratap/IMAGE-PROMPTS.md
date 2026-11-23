@@ -25,6 +25,8 @@ Dr. Ram Pratap, so its address is **not** used.
 | `clinical-excellence-award.jpg` | Gallery | **Real photo** supplied by you: Clinical Excellence Award certificate (projector screen cropped off) |
 | `batra-heart-trophy.jpg` | Gallery | **Real photo** supplied by you: trophy at Batra Heart & Multispeciality Hospital (date stamp cropped off) |
 | `fisiocon-2026-group.jpg` | Gallery | **Real photo** supplied by you: group photo at Fortis FISIOCON 2026 |
+| `blk-max-spine-summit.jpg` | Gallery (tall tile) | **Real photo** supplied by you: certificate at BLK-Max Spine Summit Live, 5 April 2026 (ceiling and audience cropped off) |
+| `physio-conference-group.jpg` | Gallery | **Real photo** supplied by you: group of delegates at a physiotherapy conference. The conference name is hidden behind people in the photo, so the caption is general; send the name if you want it shown |
 
 Removed: all AI therapy images; the gallery is now only real photos. Not used: a second Fortis FISIOCON certificate
 photo (same moment as `fortis-fisiocon-2026.jpg`) and the photo of the clinic desk with a knee

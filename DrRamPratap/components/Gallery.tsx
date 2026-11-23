@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { Icon } from "./Icon";
 
-type Item = { src: string; alt: string; wide?: boolean; pos?: string };
+type Item = { src: string; alt: string; wide?: boolean; tall?: boolean; pos?: string };
 
 export function Gallery({ items }: { items: Item[] }) {
   const [idx, setIdx] = useState<number | null>(null);
@@ -23,7 +23,7 @@ export function Gallery({ items }: { items: Item[] }) {
     <>
       <div className="gallery-grid">
         {items.map((g, i) => (
-          <button key={g.src} className={`gallery-item${g.wide ? " is-wide" : ""}`} onClick={() => setIdx(i)} aria-label={`Open photo: ${g.alt}`}>
+          <button key={g.src} className={`gallery-item${g.wide ? " is-wide" : ""}${g.tall ? " is-tall" : ""}`} onClick={() => setIdx(i)} aria-label={`Open photo: ${g.alt}`}>
             <img src={g.src} alt={g.alt} loading="lazy" style={g.pos ? { objectPosition: g.pos } : undefined} />
             <span>{g.alt}</span>
           </button>

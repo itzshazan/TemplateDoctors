@@ -87,15 +87,17 @@ export const marquee = [
 ];
 
 // All gallery photos are real photos supplied by Dr. Ram Pratap (fortis-talk.jpg is cropped from his clinic poster).
-// `pos` is the CSS object-position used when a photo is cropped into its tile.
-export const gallery: { src: string; alt: string; wide?: boolean; pos?: string }[] = [
+// `tall` makes a tile two rows high; `pos` is the CSS object-position used when a photo is cropped into its tile.
+export const gallery: { src: string; alt: string; wide?: boolean; tall?: boolean; pos?: string }[] = [
   { src: `${IMG}/physio-event-group.jpg`, alt: "With fellow physiotherapists at an event", wide: true, pos: "center 40%" },
   { src: `${IMG}/fortis-fisiocon-2026.jpg`, alt: "Receiving a certificate at Fortis FISIOCON 2026", pos: "center 50%" },
   { src: `${IMG}/fisiocon-2026-plaque.jpg`, alt: "Felicitated at Fortis FISIOCON 2026", pos: "center 30%" },
+  { src: `${IMG}/blk-max-spine-summit.jpg`, alt: "Certificate at BLK-Max Spine Summit, April 2026", tall: true, pos: "center 40%" },
   { src: `${IMG}/clinical-excellence-award.jpg`, alt: "Receiving a Clinical Excellence Award", pos: "center 4%" },
   { src: `${IMG}/batra-heart-trophy.jpg`, alt: "Honoured at Batra Heart & Multispeciality Hospital", pos: "center 40%" },
   { src: `${IMG}/iap-certificate.jpg`, alt: "Certificate of appreciation, Indian Association of Physiotherapists", pos: "center 40%" },
   { src: `${IMG}/award-physio-bharat.jpg`, alt: "Receiving the Physio Bharat 7 certificate", pos: "center 45%" },
   { src: `${IMG}/fortis-talk.jpg`, alt: "Speaking at Fortis Memorial Research Institute", pos: "center 30%" },
   { src: `${IMG}/fisiocon-2026-group.jpg`, alt: "With physiotherapists at Fortis FISIOCON 2026", pos: "center 40%" },
+  { src: `${IMG}/physio-conference-group.jpg`, alt: "With fellow delegates at a physiotherapy conference", pos: "center 35%" },
 ];
