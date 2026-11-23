@@ -21,9 +21,13 @@ Dr. Ram Pratap, so its address is **not** used.
 | `physio-event-group.jpg` | Gallery (large tile) | **Real photo** supplied by you: group photo at a physiotherapists' event |
 | `iap-certificate.jpg` | Gallery | **Real photo** supplied by you: certificate of appreciation, Indian Association of Physiotherapists |
 | `fortis-talk.jpg` | Gallery | **Real photo**, cropped from his H Heals clinic poster: speaking at Fortis Memorial Research Institute |
-| `g-dry-cupping.jpg` | Gallery | AI-generated (Figma AI) to show these therapies in general. No faces; they do not show Dr. Ram Pratap |
+| `fisiocon-2026-plaque.jpg` | Gallery | **Real photo** supplied by you: holding a plaque at Fortis FISIOCON 2026 |
+| `clinical-excellence-award.jpg` | Gallery | **Real photo** supplied by you: Clinical Excellence Award certificate (projector screen cropped off) |
+| `batra-heart-trophy.jpg` | Gallery | **Real photo** supplied by you: trophy at Batra Heart & Multispeciality Hospital (date stamp cropped off) |
+| `fisiocon-2026-group.jpg` | Gallery | **Real photo** supplied by you: group photo at Fortis FISIOCON 2026 |
 
-Removed: the other four AI therapy images, now replaced by real photos. The photo of the clinic desk with a knee
+Removed: all AI therapy images; the gallery is now only real photos. Not used: a second Fortis FISIOCON certificate
+photo (same moment as `fortis-fisiocon-2026.jpg`) and the photo of the clinic desk with a knee
 model (Dr. Hitesh Gupta's sign) is still not used.
 
 ## From the clinic poster (Nov 2026)
